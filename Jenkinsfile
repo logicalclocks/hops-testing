@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'platform_testing'
+    }
+  }
   stages {
     stage('cleanup') {
       agent {
