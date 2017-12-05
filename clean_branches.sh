@@ -14,6 +14,7 @@ do
   cd $repo
   if [ "$(git branch --list test_platform)" ]
   then
+    git reset --hard HEAD
     git checkout master
     git branch -D test_platform
     if [ "$(git show-branch remotes/origin/test_platform)" ]
