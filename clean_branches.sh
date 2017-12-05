@@ -7,6 +7,8 @@ then
   exit 0
 fi
 
+rm ../test_manifesto
+
 for repo in ../repos/*/
 do
   cd $repo

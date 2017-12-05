@@ -2,6 +2,7 @@
 set -e
 
 # Do everything one directory above to make cleaning easier
+cp test_manifesto ..
 cd ..
 
 # List of cookbooks and hopsworks repos
