@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
             "default" =>      {
                     "private_ips" => ["10.0.2.15"]
             },
+            "run_timeout" => 7200,
           },
           "test" => {
             "hopsworks" => {
