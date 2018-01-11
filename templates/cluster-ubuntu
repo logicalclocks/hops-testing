@@ -19,6 +19,10 @@ attrs:
     ca_url: http://snurran.sics.se/hops/hopsworks/0.1.0/hopsworks-ca.war
     port: 8080
     version: test
+  hops:
+   num_replicas: 2
+   rpc:
+    ssl: true
 groups:
   namenodes:
     size: 1
