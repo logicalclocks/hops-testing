@@ -37,6 +37,12 @@ do
   cd ..
 done
 
+# Emacs by default doesn't add a new line at the end of the file.
+# This means, for instance, that wc -l shows a n-1 number of lines
+# The next part of the script assumes that bash can count the number of lines correctly
+# The following is a trick to add the newline at the end, if it doesn't exist
+sed -i '$a\' ../test_manifesto
+
 # Parse the test specification file
 while IFS= read -r line
 do
