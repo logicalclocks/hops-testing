@@ -1,2 +1,10 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+jimdowling/hopsworks/umask
+hopshadoop/hopsworks-chef/flyway
+hopshadoop/kagent-chef/flyway
+hopshadoop/hops-hadoop-chef/flyway
+hopshadoop/hadoop_spark/flyway
+hopshadoop/tensorflow-chef/flyway
+hopshadoop/epipe-chef/flyway
+hopshadoop/dela-chef/flyway
+hopshadoop/kzookeeper/flyway
+hopshadoop/hive-chef/flyway
