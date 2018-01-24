@@ -2,7 +2,7 @@ jimdowling/hopsworks/umask
 hopshadoop/hopsworks-chef/flyway
 hopshadoop/kagent-chef/flyway
 hopshadoop/hops-hadoop-chef/flyway
-hopshadoop/hadoop_spark/flyway
+hopshadoop/spark-chef/flyway
 hopshadoop/tensorflow-chef/flyway
 hopshadoop/epipe-chef/flyway
 hopshadoop/dela-chef/flyway
