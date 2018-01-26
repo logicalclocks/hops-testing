@@ -6,7 +6,7 @@ VBOX_MANAGE=/usr/bin/vboxmanage
 vms=`$VBOX_MANAGE list vms | awk -F'[{|}]' '{print $2}'`
 
 pkill VBoxHeadless
-sleep 5
+sleep 10
 
 for vm in ${vms}; do
   $VBOX_MANAGE unregistervm ${vm}
