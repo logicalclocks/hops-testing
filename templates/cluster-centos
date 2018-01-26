@@ -14,11 +14,7 @@ attrs:
     network:
       interface: eth0
   hopsworks:
-    war_url: http://snurran.sics.se/hops/hopsworks/0.1.0/hopsworks-web.war
-    ear_url: http://snurran.sics.se/hops/hopsworks/0.1.0/hopsworks-ear.ear
-    ca_url: http://snurran.sics.se/hops/hopsworks/0.1.0/hopsworks-ca.war
     port: 8080
-    version: test
 groups:
   namenodes:
     size: 1
@@ -51,4 +47,3 @@ groups:
       - tensorflow
       - hopsmonitor::telegraf
       - hive2
-
