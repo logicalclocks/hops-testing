@@ -7,7 +7,10 @@ then
   exit 0
 fi
 
-rm ../test_manifesto
+if [ -f ../test_manifesto ]
+then
+  rm ../test_manifesto
+fi
 
 for repo in ../repos/*/
 do
