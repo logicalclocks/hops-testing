@@ -8,3 +8,4 @@ hopshadoop/epipe-chef/flyway
 hopshadoop/dela-chef/flyway
 hopshadoop/kzookeeper/flyway
 hopshadoop/hive-chef/flyway
+hopshadoop/conda-chef/flyway
