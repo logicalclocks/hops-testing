@@ -1,2 +1,3 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+siroibaf/hops-hadoop-chef/influxdb_fix
+siroibaf/hopsmonitor-chef/influxdb_fix
+siroibaf/spark-chef/influxdb_fix
