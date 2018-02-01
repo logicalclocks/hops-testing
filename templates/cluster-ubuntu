@@ -15,6 +15,12 @@ attrs:
       interface: enp0s3
   hopsworks:
     port: 8080
+  ndb:
+    BackupDataDir: "/srv/hops/mysql-cluster/backup_dirs"
+    remote_backup_host: "archives.sics.se"
+    remote_backup_user: "my_user"
+    remote_backup_dir: "/big_disk/backups"
+    local_backup_dir: "/srv/hops/local_dir"
 groups:
   namenodes:
     size: 1
