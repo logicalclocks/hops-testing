@@ -7,7 +7,9 @@ then
   then
     # The vm daemon is not up, start a new one
     nohup /usr/lib/virtualbox/VBoxSVC --pidfile /home/jenkins/VBoxSVC.pid >/dev/null 2>&1 &
+    sleep 5
   fi
 else
     nohup /usr/lib/virtualbox/VBoxSVC --pidfile /home/jenkins/VBoxSVC.pid >/dev/null 2>&1 &
+    sleep 5
 fi
