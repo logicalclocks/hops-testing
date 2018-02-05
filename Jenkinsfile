@@ -26,6 +26,16 @@ pipeline {
         sh '${WORKSPACE}/prepare_repos.sh'
       }
     }
+    stage('setupVBoxSVC') {
+      agent {
+        node {
+          label 'platform_testing'
+        }
+      }
+      steps {
+        sh '${WORKSPACE}/setup_svc.sh'
+      }
+    }
     stage('build') {
       parallel {
         stage('BuildUbuntu') {
