@@ -33,7 +33,11 @@ pipeline {
         }
       }
       steps {
-        sh '${WORKSPACE}/setup_svc.sh'
+        script {
+          withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
+            sh '${WORKSPACE}/setup_svc.sh'
+          }
+        }
       }
     }
     stage('build') {

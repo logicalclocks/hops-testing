@@ -1,15 +1,14 @@
 #!/bin/bash
 
-if [ -f /home/jenkins/VBoxSVC.pid ];
+if [ -f $HOME/VBoxSVC.pid ];
 then
-  PSOUT=$(ps aux | grep $(cat /home/jenkins/VBoxSVC.pid) | wc -l)
+  PSOUT=$(ps aux | grep $(cat $HOME/VBoxSVC.pid) | wc -l)
   if [ $PSOUT -eq 1 ];
   then
     # The vm daemon is not up, start a new one
-    nohup /usr/lib/virtualbox/VBoxSVC --pidfile /home/jenkins/VBoxSVC.pid >/dev/null 2>&1 &
-    sleep 5
+    nohup /usr/lib/virtualbox/VBoxSVC --pidfile $HOME/VBoxSVC.pid >/dev/null 2>&1 &
   fi
 else
-    nohup /usr/lib/virtualbox/VBoxSVC --pidfile /home/jenkins/VBoxSVC.pid >/dev/null 2>&1 &
-    sleep 5
+    # The vm daemon is not up, start a new one
+    nohup /usr/lib/virtualbox/VBoxSVC --pidfile $HOME/VBoxSVC.pid >/dev/null 2>&1 &
 fi
