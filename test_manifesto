@@ -1,2 +1,5 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+hopshadoop/hopsworks-chef/downloader
+hopshadoop/kagent-chef/downloader
+hopshadoop/hops-hadoop-chef/downloader
+hopshadoop/spark-chef/downloader
+hopshadoop/tensorflow-chef/downloader

@@ -25,7 +25,8 @@ if [ $? -ne 0 ] ; then
     exit 2
 fi
 
-grep $1 ../hopsworks-chef/Berksfile | sed -e 's/.*hopshadoop/hopshadoop/' | sed -e 's/",\s* branch:\s*"/\//' | sed -e 's/"//' > test_manifesto
+echo "hopshadoop/hopsworks-chef/$1" > test_manifesto
+grep $1 ../hopsworks-chef/Berksfile | sed -e 's/.*hopshadoop/hopshadoop/' | sed -e 's/",\s* branch:\s*"/\//' | sed -e 's/"//' >> test_manifesto
 echo ""
 echo "Updated the file 'test_manifesto'"
 echo "Contents:"
