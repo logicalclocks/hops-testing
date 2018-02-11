@@ -10,7 +10,8 @@ fi
 if [ $# -eq 2 ] ; then
 
     cd ../hopsworks-chef
-    cp -f Berksfile.$1 Berksfile
+    cp -f Berksfile.${2} Berksfile
+    exit 1
     git commit -am 'Berksfile un-mastering from hops-testing for Vagrant'
     git push
     if [ $? -ne 0 ] ; then
@@ -20,6 +21,7 @@ if [ $# -eq 2 ] ; then
 	echo ""    
 	exit 12
     fi
+    cd ../hops-testing
     exit 0
 fi
 
@@ -52,7 +54,9 @@ if [ $? -ne 0 ] ; then
 fi
 
 cp -f Berksfile Berksfile.$1
-perl -pi -e 's/$1/master/g' Berksfile
+
+perl -pi -e "s/branch: \"$1\"/branch: \"master\"/" Berksfile
+
 git commit -am 'Berksfile mastering for hops-testing'
 git push
 if [ $? -ne 0 ] ; then
