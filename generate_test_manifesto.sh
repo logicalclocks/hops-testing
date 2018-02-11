@@ -2,27 +2,34 @@
 
 if [ $# -lt 1 ] ; then
     echo ""
-    echo "usage: $0 [rollback] branchname "
+    echo "usage: $0 [rollback] branchname [no-hopsworks]"
     echo ""        
     exit 1
 fi
 
+NO_HOPSWORKS=0
+
 if [ $# -eq 2 ] ; then
 
-    cd ../hopsworks-chef
-    cp -f Berksfile.${2} Berksfile
-    exit 1
-    git commit -am 'Berksfile un-mastering from hops-testing for Vagrant'
-    git push
-    if [ $? -ne 0 ] ; then
-	echo ""
-	echo "Error."
-	echo "Could not push Berksfile un-masterizing to github"
-	echo ""    
-	exit 12
+    if [ "$1" == "rollback" ] ; then
+	cd ../hopsworks-chef
+	cp -f Berksfile.${2} Berksfile
+	exit 1
+	git commit -am 'Berksfile un-mastering from hops-testing for Vagrant'
+	git push
+	if [ $? -ne 0 ] ; then
+	    echo ""
+	    echo "Error."
+	    echo "Could not push Berksfile un-masterizing to github"
+	    echo ""    
+	    exit 12
+	fi
+	cd ../hops-testing
+	exit 0
     fi
-    cd ../hops-testing
-    exit 0
+    if [ "$2" == "no-hopsworks" ] ; then
+	NO_HOPSWORKS=1
+    fi
 fi
 
 if [ ! -d ../hopsworks-chef ] ; then
@@ -69,7 +76,13 @@ fi
 
 cd ../hops-testing
 
-echo "hopshadoop/hopsworks-chef/$1" > test_manifesto
+if [ $NO_HOPSWORKS -eq 0 ] ; then
+    echo "hopshadoop/hopsworks/$1" > test_manifesto
+    echo "hopshadoop/hopsworks-chef/$1" >> test_manifesto
+else
+    echo "hopshadoop/hopsworks-chef/$1" > test_manifesto    
+fi    
+
 grep $1 ../hopsworks-chef/Berksfile.${1} | sed -e 's/.*hopshadoop/hopshadoop/' | sed -e 's/",\s* branch:\s*"/\//' | sed -e 's/"//' >> test_manifesto
 echo ""
 echo "Updated the file 'test_manifesto'"
