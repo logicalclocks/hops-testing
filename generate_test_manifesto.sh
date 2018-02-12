@@ -14,7 +14,6 @@ if [ $# -eq 2 ] ; then
     if [ "$1" == "rollback" ] ; then
 	cd ../hopsworks-chef
 	cp -f Berksfile.${2} Berksfile
-	exit 1
 	git commit -am 'Berksfile un-mastering from hops-testing for Vagrant'
 	git push
 	if [ $? -ne 0 ] ; then
