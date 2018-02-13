@@ -83,6 +83,9 @@ else
 fi    
 
 grep $1 ../hopsworks-chef/Berksfile.${1} | sed -e 's/.*hopshadoop/hopshadoop/' | sed -e 's/",\s* branch:\s*"/\//' | sed -e 's/"//' >> test_manifesto
+
+git commit -am 'updated test_manifesto'
+git push
 echo ""
 echo "Updated the file 'test_manifesto'"
 echo "Contents:"
