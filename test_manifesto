@@ -1,2 +1,4 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+tkakantousis/hopsworks/HOPSWORKS-415
+tkakantousis/hopsworks-chef/HOPSWORKS-415
+hopshadoop/spark-chef/HOPSWORKS-415
+tkakantousis/hops-hadoop-chef/HOPSWORKS-415
