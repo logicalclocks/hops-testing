@@ -3,6 +3,9 @@ sh ./clone_karamel_chef.sh
 
 # Copy correct Vagrantfile/cluster
 if [ "$1" == "ubuntu" ]; then
+  sleep 5m
+  rm -rf $HOME/.berkshelf
+
   cp templates/Vagrantfile-ubuntu karamel-chef/Vagrantfile
   cp templates/cluster-ubuntu karamel-chef/cluster.yml
 else
