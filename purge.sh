@@ -13,3 +13,4 @@ for vm in ${vms}; do
 done
 
 rm -rf $HOME/VirtualBox\ VMs/*
+rm -rf $HOME/.berkshelf
