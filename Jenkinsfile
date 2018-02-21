@@ -12,8 +12,8 @@ pipeline {
         }
       }
       steps {
-        sh '${WORKSPACE}/purge.sh'
-        sh '${WORKSPACE}/clean_branches.sh'
+        sh '${WORKSPACE}/scripts/purge.sh'
+        sh '${WORKSPACE}/scripts/clean_branches.sh'
       }
     }
     stage('prepareRepos') {
@@ -23,7 +23,17 @@ pipeline {
         }
       }
       steps {
-        sh '${WORKSPACE}/prepare_repos.sh'
+        sh '${WORKSPACE}/scripts/prepare_repos.sh'
+      }
+    }
+    stage('checkLicenses') {
+      agent {
+        node {
+          label 'platform_testing'
+        }
+      }
+      steps {
+        sh '${WORKSPACE}/scripts/check_licenses.sh'
       }
     }
     stage('setupVBoxSVC') {
@@ -35,7 +45,7 @@ pipeline {
       steps {
         script {
           withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
-            sh '${WORKSPACE}/setup_svc.sh'
+            sh '${WORKSPACE}/scripts/setup_svc.sh'
           }
         }
       }
@@ -49,7 +59,7 @@ pipeline {
             }
           }
           steps {
-            sh '${WORKSPACE}/run_test.sh ubuntu'
+            sh '${WORKSPACE}/scripts/run_test.sh ubuntu'
           }
           post {
             always {
@@ -65,7 +75,7 @@ pipeline {
             }
           }
           steps {
-            sh '${WORKSPACE}/run_test.sh centos'
+            sh '${WORKSPACE}/scripts/run_test.sh centos'
           }
           post {
             always {
