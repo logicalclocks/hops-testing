@@ -1,5 +1,7 @@
 #!/bin/bash
-sh ./clone_karamel_chef.sh
+
+# Exit the scripts directory
+sh scripts/clone_karamel_chef.sh
 
 # Copy correct Vagrantfile/cluster
 if [ "$1" == "ubuntu" ]; then
