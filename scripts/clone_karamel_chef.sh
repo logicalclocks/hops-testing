@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ -d karamel-chef ]; then
   cd karamel-chef
   git pull

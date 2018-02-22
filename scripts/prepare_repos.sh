@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Do everything one directory above to make cleaning easier
+# Do everything directly in the workspace so it's easier to clean
 cp test_manifesto ..
 cd ..
 
