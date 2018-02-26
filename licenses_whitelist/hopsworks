@@ -1,63 +1,62 @@
-./scripts/jim-snurran-scp.sh: UNKNOWN
-./scripts/renew-letsencrypt.sh: UNKNOWN
-./scripts/update-tables.sh: UNKNOWN
-./scripts/create_project_as_user.py: UNKNOWN
-./scripts/kafka-frontend-scp.sh: UNKNOWN
-./scripts/gautier-frontend-scp.sh: UNKNOWN
-./scripts/js.sh: UNKNOWN
-./scripts/misganu-frontend-scp.sh: UNKNOWN
-./scripts/cargo.sh: UNKNOWN
-./scripts/localhost.sh: UNKNOWN
-./scripts/antonis-bbc2-frontend.sh: UNKNOWN
-./scripts/gautier-bbc2.sh: UNKNOWN
-./scripts/deploy.sh: UNKNOWN
-./scripts/scp-deploy-frontend.sh: UNKNOWN
-./scripts/jim-bbc1-scp.sh: UNKNOWN
-./scripts/dev-deploy-frontend.sh: UNKNOWN
-./scripts/jim-frontend-vagrant.sh: UNKNOWN
-./scripts/tkak-frontend-scp.sh: UNKNOWN
-./scripts/copy.sh: UNKNOWN
 ./hopsworks-web/yo/app/scripts/js/jquery.ajax-retry.min.js: UNKNOWN
-./hopsworks-web/yo/app/scripts/js/ace/worker-json.js: UNKNOWN
 ./hopsworks-web/yo/app/scripts/js/ace/mode-json.js: UNKNOWN
-./hopsworks-ear/test/spec/conda_spec.rb: AGPL (v3 or later) 
-./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsTransport.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsRouter.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsServletHandler.java: Apache (v2.0) 
+./hopsworks-web/yo/app/scripts/js/ace/worker-json.js: UNKNOWN
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/MembraneServlet.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/json/NotebookTypeAdapterFactory.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/InterpreterBindingUtils.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/ExceptionUtils.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/TicketContainer.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/SecurityUtils.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/types/InterpreterSettingsList.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/server/JsonExclusionStrategy.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/server/JsonResponse.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsServletHandler.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsRouter.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsTransport.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/LoginRestApi.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/NotebookRepoRestApi.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewInterpreterSettingRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/RunParagraphWithParametersRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewNotebookRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/UpdateInterpreterSettingRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/CronRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewParagraphRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NotebookRepoSettingsRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewNoteRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/RestartInterpreterRequest.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/InterpreterRestApi.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/SecurityRestApi.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/ConfigurationsRestApi.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/HeliumRestApi.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/NotebookResponse.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/SecurityRestApi.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/HeliumRestApi.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/CronRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/RestartInterpreterRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/UpdateInterpreterSettingRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewNotebookRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewNoteRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewInterpreterSettingRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NotebookRepoSettingsRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/RunParagraphWithParametersRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/message/NewParagraphRequest.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/InterpreterRestApi.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/ConfigurationsRestApi.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/exception/BadRequestException.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/exception/ForbiddenException.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/exception/NotFoundException.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/exception/ForbiddenException.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/NotebookRepoRestApi.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/InterpreterBindingUtils.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/TicketContainer.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/ExceptionUtils.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/util/SecurityUtils.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/server/JsonResponse.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/server/JsonExclusionStrategy.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/types/InterpreterSettingsList.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/json/NotebookTypeAdapterFactory.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/socket/NotebookServer.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/socket/Message.java: Apache (v2.0) 
-./hopsworks-admin/src/main/webapp/bbc/js/jquery-ui.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/skinable_tabs.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/jquery.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/chosen.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/jquery-1.6.min.js: UNKNOWN
-./hopsworks-common/src/main/resources/io/hops/jupyter/jupyter_notebook_config_template.py: UNKNOWN
 ./hopsworks-common/src/main/resources/io/hops/zeppelin/zeppelin_env_template.sh: UNKNOWN
+./hopsworks-common/src/main/resources/io/hops/jupyter/jupyter_notebook_config_template.py: UNKNOWN
+./hopsworks-admin/src/main/webapp/bbc/js/jquery.min.js: UNKNOWN
+./hopsworks-admin/src/main/webapp/bbc/js/jquery-ui.min.js: UNKNOWN
+./hopsworks-admin/src/main/webapp/bbc/js/jquery-1.6.min.js: UNKNOWN
+./hopsworks-admin/src/main/webapp/bbc/js/skinable_tabs.min.js: UNKNOWN
+./hopsworks-admin/src/main/webapp/bbc/js/chosen.min.js: UNKNOWN
+./scripts/jim-snurran-scp.sh: UNKNOWN
+./scripts/copy.sh: UNKNOWN
+./scripts/tkak-frontend-scp.sh: UNKNOWN
+./scripts/gautier-bbc2.sh: UNKNOWN
+./scripts/jim-frontend-vagrant.sh: UNKNOWN
+./scripts/dev-deploy-frontend.sh: UNKNOWN
+./scripts/cargo.sh: UNKNOWN
+./scripts/renew-letsencrypt.sh: UNKNOWN
+./scripts/deploy.sh: UNKNOWN
+./scripts/create_project_as_user.py: UNKNOWN
+./scripts/antonis-bbc2-frontend.sh: UNKNOWN
+./scripts/update-tables.sh: UNKNOWN
+./scripts/kafka-frontend-scp.sh: UNKNOWN
+./scripts/jim-bbc1-scp.sh: UNKNOWN
+./scripts/js.sh: UNKNOWN
+./scripts/gautier-frontend-scp.sh: UNKNOWN
+./scripts/scp-deploy-frontend.sh: UNKNOWN
+./scripts/localhost.sh: UNKNOWN
+./scripts/misganu-frontend-scp.sh: UNKNOWN
