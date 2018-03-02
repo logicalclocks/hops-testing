@@ -10,6 +10,8 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder "../m2", "/root/.m2", create: true
     # Mount output directory
     config.vm.synced_folder "../out", "/home/vagrant/test_report", create: true
+    # Anaconda.sh directory
+    config.vm.synced_folder "../../anaconda", "/mnt/anaconda"
 
     config.vm.network :forwarded_port, guest: 22, host: 10022, id: "ssh"
     # karamel http
