@@ -22,6 +22,6 @@ This will generate a new commit for hopsworks-chef for your branch with the Berk
 
 ## Back to Vagrant
 
-./geneate_test_manifesto.sh rollback <branchname> reverts the Berksfile master changes.
+./scripts/generate_test_manifesto.sh rollback <branchname> reverts the Berksfile master changes.
 
 This will generate a new commit for hopsworks-chef for your branch with the Berksfile references all set back to '<branchname>', so you can run Vagrant again.
