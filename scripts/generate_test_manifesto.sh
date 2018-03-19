@@ -76,7 +76,7 @@ fi
 cd ../hops-testing
 
 if [ $NO_HOPSWORKS -eq 0 ] ; then
-    echo "hopshadoop/hopsworks/$1" > test_manifesto
+    echo "jimdowling/hopsworks/$1" > test_manifesto
     echo "hopshadoop/hopsworks-chef/$1" >> test_manifesto
 else
     echo "hopshadoop/hopsworks-chef/$1" > test_manifesto    

@@ -1,2 +1,6 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+jimdowling/hopsworks/kagent_fixes
+hopshadoop/hopsworks-chef/kagent_fixes
+hopshadoop/conda-chef/kagent_fixes
+hopshadoop/kagent-chef/kagent_fixes
+hopshadoop/spark-chef/kagent_fixes
+hopshadoop/tensorflow-chef/kagent_fixes

@@ -16,12 +16,12 @@ This means the Berksfile for hopsworks-chef branch should have references to the
 
 4. Generate test_manifesto
 
-./generate_test_manifesto.sh <branchname>
+./scripts/generate_test_manifesto.sh <branchname>
 
 This will generate a new commit for hopsworks-chef for your branch with the Berksfile references all set to 'master', making a backup with the old Berksfile, so you can rollback for running Vagrant again.
 
 ## Back to Vagrant
 
-./geneate_test_manifesto.sh rollback <branchname> reverts the Berksfile master changes.
+./scripts/generate_test_manifesto.sh rollback <branchname> reverts the Berksfile master changes.
 
 This will generate a new commit for hopsworks-chef for your branch with the Berksfile references all set back to '<branchname>', so you can run Vagrant again.
