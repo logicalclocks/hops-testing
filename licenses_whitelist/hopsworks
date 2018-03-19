@@ -39,8 +39,6 @@
 ./hopsworks-admin/src/main/webapp/bbc/js/jquery.min.js: UNKNOWN
 ./hopsworks-admin/src/main/webapp/bbc/js/jquery-ui.min.js: UNKNOWN
 ./hopsworks-admin/src/main/webapp/bbc/js/jquery-1.6.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/skinable_tabs.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/chosen.min.js: UNKNOWN
 ./scripts/jim-snurran-scp.sh: UNKNOWN
 ./scripts/copy.sh: UNKNOWN
 ./scripts/tkak-frontend-scp.sh: UNKNOWN
