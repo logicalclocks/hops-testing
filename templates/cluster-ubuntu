@@ -18,6 +18,11 @@ attrs:
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
+  hops:
+   tls:
+    enabled: true
+    crl_enabled: true
+    crl_fetcher_interval: "1m"
 groups:
   namenodes:
     size: 1
