@@ -1,10 +1,11 @@
-./hopsworks-web/yo/app/scripts/js/jquery.ajax-retry.min.js: UNKNOWN
-./hopsworks-web/yo/app/scripts/js/ace/mode-json.js: UNKNOWN
-./hopsworks-web/yo/app/scripts/js/ace/worker-json.js: UNKNOWN
+./hopsworks-web/yo/app/scripts/js/ace/ace.js: BSD (3 clause) 
+./hopsworks-web/yo/app/scripts/js/ace/mode-json.js: BSD (3 clause) 
+./hopsworks-web/yo/app/scripts/js/ace/worker-json.js: BSD (3 clause) 
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/MembraneServlet.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsServletHandler.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsRouter.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsTransport.java: Apache (v2.0) 
+./hopsworks-api/src/main/java/io/hops/hopsworks/api/kibana/ProxyServlet.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/LoginRestApi.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/NotebookResponse.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/SecurityRestApi.java: Apache (v2.0) 
@@ -36,11 +37,6 @@
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/socket/Message.java: Apache (v2.0) 
 ./hopsworks-common/src/main/resources/io/hops/zeppelin/zeppelin_env_template.sh: UNKNOWN
 ./hopsworks-common/src/main/resources/io/hops/jupyter/jupyter_notebook_config_template.py: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/jquery.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/jquery-ui.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/jquery-1.6.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/skinable_tabs.min.js: UNKNOWN
-./hopsworks-admin/src/main/webapp/bbc/js/chosen.min.js: UNKNOWN
 ./scripts/jim-snurran-scp.sh: UNKNOWN
 ./scripts/copy.sh: UNKNOWN
 ./scripts/tkak-frontend-scp.sh: UNKNOWN
