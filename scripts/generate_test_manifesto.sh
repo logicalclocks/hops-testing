@@ -75,8 +75,10 @@ fi
 
 cd ../hops-testing
 
+repo=$(git remote -v | grep origin | grep fetch | sed -e 's/origin\tgit@github.com://' | sed -e 's/\/.*//')
+
 if [ $NO_HOPSWORKS -eq 0 ] ; then
-    echo "hopshadoop/hopsworks/$1" > test_manifesto
+    echo "${repo}/hopsworks/$1" > test_manifesto
     echo "hopshadoop/hopsworks-chef/$1" >> test_manifesto
 else
     echo "hopshadoop/hopsworks-chef/$1" > test_manifesto    
