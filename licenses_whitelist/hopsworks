@@ -4,7 +4,7 @@
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/MembraneServlet.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsServletHandler.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsRouter.java: Apache (v2.0) 
-./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsTransport.java: Apache (v2.0)
+./hopsworks-api/src/main/java/com/predic8/membrane/servlet/embedded/HopsTransport.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/kibana/ProxyServlet.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/LoginRestApi.java: Apache (v2.0) 
 ./hopsworks-api/src/main/java/io/hops/hopsworks/api/zeppelin/rest/NotebookResponse.java: Apache (v2.0) 
