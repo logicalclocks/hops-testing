@@ -1,1 +1,4 @@
-tkakantousis/hopsworks/fix_kafka_tour
+tkakantousis/hopsworks/HOPSWORKS-540
+tkakantousis/livy-chef/HOPSWORKS-481
+tkakantousis/hops-hadoop-chef/HOPSWORKS-540
+hopshadoop/spark-chef/HOPSWORKS-481
