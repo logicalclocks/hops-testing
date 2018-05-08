@@ -18,6 +18,14 @@ attrs:
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
+  hops:
+    num_replicas: 2
+    tls:
+     enabled: true
+     certs_actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppCertificateActions"
+     crl_enabled: true
+     crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
+     crl_fetcher_interval: "5m"
 groups:
   namenodes:
     size: 1
