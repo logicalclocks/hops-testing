@@ -51,13 +51,6 @@ fi
 
 grep "branch: \"$1\"" Berksfile > /dev/null
 
-if [ $? -ne 0 ] ; then
-    echo ""
-    echo "Error."
-    echo "Could not find the branch $1 in hopsworks-chef/Berksfile"
-    echo ""    
-    exit 2
-fi
 
 cp -f Berksfile Berksfile.$1
 
