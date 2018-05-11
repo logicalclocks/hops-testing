@@ -51,13 +51,6 @@ fi
 
 grep "branch: \"$1\"" Berksfile > /dev/null
 
-if [ $? -ne 0 ] ; then
-    echo ""
-    echo "Error."
-    echo "Could not find the branch $1 in hopsworks-chef/Berksfile"
-    echo ""    
-    exit 2
-fi
 
 cp -f Berksfile Berksfile.$1
 
@@ -75,8 +68,10 @@ fi
 
 cd ../hops-testing
 
+repo=$(git remote -v | grep origin | grep fetch | sed -e 's/origin\tgit@github.com://' | sed -e 's/\/.*//')
+
 if [ $NO_HOPSWORKS -eq 0 ] ; then
-    echo "hopshadoop/hopsworks/$1" > test_manifesto
+    echo "${repo}/hopsworks/$1" > test_manifesto
     echo "hopshadoop/hopsworks-chef/$1" >> test_manifesto
 else
     echo "hopshadoop/hopsworks-chef/$1" > test_manifesto    
