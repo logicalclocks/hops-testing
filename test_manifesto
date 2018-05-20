@@ -1,2 +1,10 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+jimdowling/hopsworks/jimfix
+hopshadoop/hopsworks-chef/jimfix
+hopshadoop/conda-chef/jimfix
+hopshadoop/kagent-chef/jimfix
+hopshadoop/hops-hadoop-chef/jimfix
+hopshadoop/ndb-chef/jimfix
+hopshadoop/livy-chef/jimfix
+hopshadoop/tensorflow-chef/jimfix
+hopshadoop/elasticsearch-chef/jimfix
+hopshadoop/hive-chef/jimfix
