@@ -1,2 +1,3 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+jimdowling/hopsworks/cudize
+hopshadoop/hopsworks-chef/cudize
+hopshadoop/tensorflow-chef/cudize
