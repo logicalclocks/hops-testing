@@ -1,2 +1,7 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+jimdowling/hopsworks/cudize
+hopshadoop/hopsworks-chef/cudize
+hopshadoop/kagent-chef/cudize
+hopshadoop/hops-hadoop-chef/cudize
+hopshadoop/ndb-chef/cudize
+hopshadoop/spark-chef/cudize
+hopshadoop/tensorflow-chef/cudize
