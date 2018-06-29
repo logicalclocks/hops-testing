@@ -1,2 +1,4 @@
-hopshadoop/hopsworks/master
-hopshadoop/hopsworks-chef/master
+jimdowling/hopsworks/mmlspark
+hopshadoop/hopsworks-chef/mmlspark
+hopshadoop/kagent-chef/mmlspark
+hopshadoop/tensorflow-chef/mmlspark
