@@ -2,18 +2,19 @@
 
 set -e
 
-checker_bin="$WORKSPACE/scripts/licensecheck.pl"
-whitelist_dir="$WORKSPACE/licenses_whitelist"
+# Check if virtualenv has been created
+cd ..
+if [ ! -d license_checker_env ]
+then
+  virtualenv -p python3.6 license_checker_env
+  source license_checker_env/bin/activate
+  pip install gitpython
+else
+  source license_checker_env/bin/activate
+fi
 
 # All the repositories are in the repos directory under the workspace directory
-cd ../repos
+cd repos
 
 # Currently we only check the license headers in Hopsworks
-repos=(hopsworks)
-
-for repo in "${repos[@]}"
-do
-  cd $repo
-  diff <($checker_bin -r . | grep -v "MIT" | sort) <(cat "$whitelist_dir/$repo" | sort)
-  cd ..
-done
+python ../HopsWorks-testing/scripts/license_checker.py --dir hopsworks --whitelist_dir ../HopsWorks-testing/licenses_whitelist --branch test_platform --fork_commit 624d72e7e64decd585c1df9b90fe62b43b19a600

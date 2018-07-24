@@ -28,7 +28,11 @@ do
   else
     git clone git@github.com:hopsworksjenkins/$repo.git
     cd $repo
-    git remote add upstream git@github.com:hopshadoop/$repo.git
+    if [ "$repo" == "hopsworks" ]; then
+      git remote add upstream git@github.com:logicalclocks/$repo.git
+    else
+      git remote add upstream git@github.com:hopshadoop/$repo.git
+    fi
   fi
 
   # Update the repositories
