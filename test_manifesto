@@ -1,1 +1,6 @@
-logicalclocks/hopsworks/master
+maismail/hopsworks/HOPSWORKS-559
+robzor92/hopsworks-chef/HOPSWORKS-558
+tkakantousis/spark-chef/HOPSWORKS-251
+robzor92/epipe-chef/HOPSWORKS-558
+robzor92/elasticsearch-chef/HOPSWORKS-558
+robzor92/hopslog-chef/HOPSWORKS-558
