@@ -28,11 +28,7 @@ do
   else
     git clone git@github.com:hopsworksjenkins/$repo.git
     cd $repo
-    if [ "$repo" == "hopsworks" ]; then
-      git remote add upstream git@github.com:logicalclocks/$repo.git
-    else
-      git remote add upstream git@github.com:hopshadoop/$repo.git
-    fi
+    git remote add upstream git@github.com:logicalclocks/$repo.git
   fi
 
   # Update the repositories
@@ -60,7 +56,7 @@ do
 done <"../test_manifesto"
 
 # Replace all the Berksfile links from
-find . -type f -name "Berksfile" -exec  sed -i 's/hopshadoop/hopsworksjenkins/g' {} \;
+find . -type f -name "Berksfile" -exec  sed -i 's/logicalclocks/hopsworksjenkins/g' {} \;
 find . -type f -name "Berksfile" -exec  sed -i 's/master/test_platform/g' {} \;
 
 # Push everything
