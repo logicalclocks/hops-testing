@@ -62,8 +62,13 @@ def check_only_agpl(file_path):
     matches_copyright = re.findall(copyright_lc_regex, content)
     matches_copyright_rise = re.findall(copyright_with_rise_regex, content)
 
+    commit_regex = commit_regex_placeholder.replace("commit_id", str(fork_commit))
+    matches_commit = re.findall(commit_regex, content)
+
     return len(matches_agpl) == 1 and len(matches_mit) == 0 \
-           and len(matches_copyright) == 1 and len(matches_copyright_rise) == 0
+           and len(matches_copyright) == 1 and len(matches_copyright_rise) == 0 \
+           and len(matches_commit) == 0
+
 
 
 def check_double_license(file_path, fork_commit):
