@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+robzor92/hopsworks/HOPSWORKS-532
+robzor92/hopsworks-chef/HOPSWORKS-532
+robzor92/tensorflow-chef/HOPSWORKS-532
+robzor92/elasticsearch-chef/HOPSWORKS-532
