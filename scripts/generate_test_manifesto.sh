@@ -51,6 +51,13 @@ fi
 
 grep "branch: \"$1\"" Berksfile > /dev/null
 
+if [ $? -ne 0 ] ; then
+    echo ""
+    echo "Error."
+    echo "Could not find the branch $1 in hopsworks-chef/Berksfile"
+    echo ""    
+    exit 2
+fi
 
 cp -f Berksfile Berksfile.$1
 
@@ -72,12 +79,12 @@ repo=$(git remote -v | grep origin | grep fetch | sed -e 's/origin\tgit@github.c
 
 if [ $NO_HOPSWORKS -eq 0 ] ; then
     echo "${repo}/hopsworks/$1" > test_manifesto
-    echo "hopshadoop/hopsworks-chef/$1" >> test_manifesto
+    echo "logicalclocks/hopsworks-chef/$1" >> test_manifesto
 else
-    echo "hopshadoop/hopsworks-chef/$1" > test_manifesto    
+    echo "logicalclocks/hopsworks-chef/$1" > test_manifesto    
 fi    
 
-grep $1 ../hopsworks-chef/Berksfile.${1} | sed -e 's/.*hopshadoop/hopshadoop/' | sed -e 's/",\s* branch:\s*"/\//' | sed -e 's/"//' >> test_manifesto
+grep $1 ../hopsworks-chef/Berksfile.${1} | sed -e 's/.*logicalclocks/logicalclocks/' | sed -e 's/",\s* branch:\s*"/\//' | sed -e 's/"//' >> test_manifesto
 
 git commit -am 'updated test_manifesto'
 git push
