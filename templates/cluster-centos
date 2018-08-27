@@ -32,6 +32,9 @@ attrs:
       threshold: "10s"
     jwt:
       lifetime_ms: '43200000'
+    hive2:
+      scratch_dir_delay: "30s"
+      scratch_dir_cleaner_interval: "10s"
 
 groups:
   namenodes:
