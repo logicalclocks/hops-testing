@@ -113,4 +113,5 @@ Vagrant.configure("2") do |config|
         chef.add_recipe "karamel::run"
         chef.add_recipe "karamel::test"
     end
+  end
 end
