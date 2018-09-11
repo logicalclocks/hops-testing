@@ -13,20 +13,30 @@ attrs:
   kagent:
     network:
       interface: enp0s3
+  hops:
+    num_replicas: 2
+    tls:
+     enabled: true
+     certs_actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppCertificateActions"
+     crl_enabled: true
+     crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
+     crl_fetcher_interval: "5m"
+    encrypt_data_transfer:
+     enabled: true
   hopsworks:
-    port: 8080
+     encryption_password: "verysecurepassword"
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
+
 groups:
   namenodes:
     size: 1
     baremetal:
-      ip: 10.0.2.15
+      ip: 192.168.56.101
     recipes:
       - kagent
       - ndb::mgmd
-      - ndb::ndbd
       - ndb::mysqld
       - hops::ndb
       - hops::rm
@@ -35,19 +45,48 @@ groups:
       - hadoop_spark::yarn
       - hadoop_spark::historyserver
       - flink::yarn
-      - elastic
-      - livy
       - zeppelin
-      - kzookeeper
-      - kkafka
-      - epipe
       - hopsworks
       - hopsworks::dev
       - hopsmonitor
+      - tensorflow
       - hopslog
-      - hopslog::_filebeat
+      - hopsmonitor::telegraf
+      - kzookeeper
+      - livy
+      - hive2
+      - kagent::dev
+  datanode1:
+    size: 1
+    baremetal:
+      ip: 192.168.56.102
+    recipes:
+      - kagent
+      - ndb::ndbd
+      - ndb::mysqld
+      - hops::ndb
+      - hops::nn
       - hops::dn
       - hops::nm
-      - tensorflow
+      - kzookeeper
+      - epipe
+      - hadoop_spark::yarn
       - hopsmonitor::telegraf
-      - hive2
+      - hopslog::_filebeat
+      - tensorflow
+  datanode2:
+    size: 1
+    baremetal:
+      ip: 192.168.56.103
+    recipes:
+      - kagent
+      - ndb::ndbd
+      - kzookeeper
+      - elastic
+      - hops::dn
+      - hops::nm
+      - kkafka
+      - hadoop_spark::yarn
+      - hopsmonitor::telegraf
+      - hopslog::_filebeat
+      - tensorflow
