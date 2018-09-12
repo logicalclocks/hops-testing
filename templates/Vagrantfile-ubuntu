@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
     hopsworks2.vm.hostname = 'hopsworks2'
 
     hopsworks2.vm.network :private_network, ip: "192.168.56.103"
+    hopsworks0.vm.network :forwarded_port, guest: 22, host: 10022, id: "ssh"
 
     hopsworks2.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
@@ -34,6 +35,7 @@ Vagrant.configure("2") do |config|
     hopsworks1.vm.hostname = 'hopsworks1'
 
     hopsworks1.vm.network :private_network, ip: "192.168.56.102"
+    hopsworks0.vm.network :forwarded_port, guest: 22, host: 10023, id: "ssh"
 
     hopsworks1.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
@@ -68,7 +70,7 @@ Vagrant.configure("2") do |config|
     # Mount output directory
     hopsworks0.vm.synced_folder "../out", "/home/vagrant/test_report", create: true
 
-    hopsworks0.vm.network :forwarded_port, guest: 22, host: 10022, id: "ssh"
+    hopsworks0.vm.network :forwarded_port, guest: 22, host: 10024, id: "ssh"
     # karamel http
     hopsworks0.vm.network(:forwarded_port, {:guest=>9090, :host=>9090})
     # Hopsworks http
