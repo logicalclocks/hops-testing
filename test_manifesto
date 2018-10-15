@@ -1,2 +1,6 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/kagent-chef/HOPSWORKS-582
+kouzant/hopsworks/HOPSWORKS-582
+kouzant/hops-hadoop-chef/HOPSWORKS-582
+kouzant/kafka-cookbook/HOPSWORKS-582
+kouzant/hopsworks-chef/HOPSWORKS-582
+kouzant/hive-chef/HOPSWORKS-582
