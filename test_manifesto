@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+robzor92/hopsworks/HOPSWORKS-722
+robzor92/tensorflow-chef/HOPSWORKS-722
+robzor92/conda-chef/HOPSWORKS-722
