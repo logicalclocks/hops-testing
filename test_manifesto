@@ -1,2 +1,2 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+tkakantousis/livy-chef/upgrade_spark
+tkakantousis/spark-chef/HOPSWORKS-656
