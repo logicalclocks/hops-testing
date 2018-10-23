@@ -57,6 +57,7 @@ groups:
       - livy
       - hive2
       - kagent::dev
+      - dela
   datanode1:
     size: 1
     baremetal:
