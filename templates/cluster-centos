@@ -52,3 +52,4 @@ groups:
       - tensorflow
       - hopsmonitor::telegraf
       - hive2
+      - dela
