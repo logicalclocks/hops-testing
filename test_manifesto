@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+tkakantousis/hopsworks/upgrade_kibana
+tkakantousis/hopslog-chef/kibana_upgrade_fix
+tkakantousis/elasticsearch-chef/upgrade_kibana
+tkakantousis/epipe-chef/upgrade_kibana
