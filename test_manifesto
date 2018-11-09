@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+Limmen/livy-chef/HOPSWORKS-745
+Limmen/spark-chef/HOPSWORKS-745
+Limmen/hive-chef/HOPSWORKS-745
+Limmen/hopsworks/HOPSWORKS-745
