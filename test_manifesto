@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+jimdowling/hopsworks/conda_speedup
+logicalclocks/hopsworks-chef/conda_speedup
+logicalclocks/kagent-chef/conda_speedup
