@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/hopsworks/HOPSWORKS-810
+kouzant/hopsworks-chef/HOPSWORKS-810
+kouzant/chef-glassfish/HOPSWORKS-810
