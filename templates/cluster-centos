@@ -45,6 +45,7 @@ groups:
       - epipe
       - hopsworks
       - hopsworks::dev
+      - hopsworks::migrate
       - hopsmonitor
       - hopslog
       - hopslog::_filebeat-spark

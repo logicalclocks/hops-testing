@@ -50,6 +50,7 @@ groups:
       - zeppelin
       - hopsworks
       - hopsworks::dev
+      - hopsworks::migrate
       - hopsmonitor
       - tensorflow
       - hopslog
