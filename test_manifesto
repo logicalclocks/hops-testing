@@ -1,2 +1,5 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+siroibaf/hopsworks/HOPSWORKS-683
+siroibaf/hopsworks-chef/HOPSWORKS-683
+siroibaf/kagent-chef/HOPSWORKS-683
+siroibaf/hops-hadoop-chef/HOPSWORKS-683
+siroibaf/hive-chef/HOPSWORKS-683
