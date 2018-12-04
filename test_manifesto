@@ -4,5 +4,5 @@ siroibaf/kagent-chef/HOPSWORKS-683
 siroibaf/hops-hadoop-chef/HOPSWORKS-683
 siroibaf/hive-chef/HOPSWORKS-683
 siroibaf/epipe-chef/HOPSWORKS-683
-siroibaf/elastic-chef/HOPSWORKS-683
+siroibaf/elasticsearch-chef/HOPSWORKS-683
 logicalclocks/ndb-chef/7.6.8
