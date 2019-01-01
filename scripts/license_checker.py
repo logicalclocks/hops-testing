@@ -54,7 +54,7 @@ def get_file_content(file_path):
         return content.replace("=begin", '').replace("=end", '')
 
 
-def check_only_agpl(file_path):
+def check_only_agpl(file_path, fork_commit):
     content = get_file_content(file_path)
 
     matches_agpl = re.findall(agpl_regex, content)
@@ -62,8 +62,12 @@ def check_only_agpl(file_path):
     matches_copyright = re.findall(copyright_lc_regex, content)
     matches_copyright_rise = re.findall(copyright_with_rise_regex, content)
 
+    commit_regex = commit_regex_placeholder.replace("commit_id", str(fork_commit))
+    matches_commit = re.findall(commit_regex, content)
+
     return len(matches_agpl) == 1 and len(matches_mit) == 0 \
-           and len(matches_copyright) == 1 and len(matches_copyright_rise) == 0
+           and len(matches_copyright) == 1 and len(matches_copyright_rise) == 0 \
+           and len(matches_commit) == 0
 
 
 def check_double_license(file_path, fork_commit):
@@ -94,7 +98,7 @@ def check_file(repo, file_rel_path, file_path, branch, shas, fork_commit, fork_c
     first_commit_idx = shas.index(revisions[-1])
     if (first_commit_idx < fork_commit_idx) or (file_rel_path in lc_files):
         # File newer than the fork. Check only AGPL license
-        return check_only_agpl(file_path)
+        return check_only_agpl(file_path, fork_commit)
     else:
         # File older than the fork. Check both header present.
         return check_double_license(file_path, fork_commit)
