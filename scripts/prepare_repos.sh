@@ -63,11 +63,25 @@ find . -type f -name "Berksfile" -exec  sed -i 's/master/test_platform/g' {} \;
 for repo in "${repos[@]}"
 do
   cd $repo
+
   # Check if there is anything to commit
   if [ "$(git diff --exit-code)" ];
   then
     git add -A
     git commit -m "Test"
+  fi
+
+  # Check if there are some wild dependencies.
+  if cat Berksfile | grep github: | grep -v test_platform
+  then
+    echo "$repo has non-master dependencies"
+    exit 1
+  fi
+
+  if cat Berksfile | grep github: | grep -v hopsworksjenkins
+  then
+    echo "$repo has non-master dependencies"
+    exit 1
   fi
 
   git push origin test_platform
