@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+Limmen/hopsworks/HOPSWORKS-853
+Limmen/spark-chef/HOPSWORKS-853
+Limmen/tensorflow-chef/HOPSWORKS-853
+Limmen/hops-hadoop-chef/HOPSWORKS-853
