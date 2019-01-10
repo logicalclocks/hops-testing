@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+jimdowling/hopsworks/gpu_stuck
+logicalclocks/hopsworks-chef/gpu_stuck
+logicalclocks/kagent-chef/gpu_stuck
