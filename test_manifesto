@@ -1,2 +1,11 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+siroibaf/kagent-chef/HOPSWORKS-867
+siroibaf/hopsworks-chef/HOPSWORKS-867
+siroibaf/hops-hadoop-chef/HOPSWORKS-867
+siroibaf/elasticsearch-chef/HOPSWORKS-867
+siroibaf/hive-chef/HOPSWORKS-867
+siroibaf/spark-chef/HOPSWORKS-867
+siroibaf/zeppelin-chef/HOPSWORKS-867
+siroibaf/livy-chef/HOPSWORKS-867
+siroibaf/flink-chef/HOPSWORKS-867
+siroibaf/kzookeeper/HOPSWORKS-867
+siroibaf/kafka-cookbook/HOPSWORKS-867
