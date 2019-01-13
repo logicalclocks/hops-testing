@@ -30,8 +30,8 @@ attrs:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
   pypi:
-    index: "http://archive.logicalclocks.com/repository/PyPI-Proxy/pypi"
-    index-url: "http://archive.logicalclocks.com/repository/PyPI-Proxy/simple"
+    index: "https://archive.logicalclocks.com/repository/PyPI-Proxy/pypi"
+    index-url: "https://archive.logicalclocks.com/repository/PyPI-Proxy/simple"
 
 groups:
   namenodes:
