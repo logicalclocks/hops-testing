@@ -31,7 +31,7 @@ attrs:
     use_defaults: "false"
 
   ndb:
-    DataMemory: '1024'
+    DataMemory: '256'
 
 groups:
   namenodes:
