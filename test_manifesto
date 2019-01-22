@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+siroibaf/kagent-chef/HOPSWORKS-880
+siroibaf/tensorflow-chef/HOPSWORKS-880
+siroibaf/conda-chef/HOPSWORKS-880
