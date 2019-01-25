@@ -1,10 +1,9 @@
 #!/bin/bash
 
-set -e
 VBOX_MANAGE=/usr/bin/vboxmanage
 
 vms=`$VBOX_MANAGE list vms | awk -F'[{|}]' '{print $2}'`
-privnetif=`${VBOX_MANAGE} showvminfo hopsworks1 | grep 'Host-only Interface' | awk -F',' '{print $2}' | awk -F' ' '{print $4}' | sed "s/'//g"`
+privnetif=`${VBOX_MANAGE} showvminfo ubuntu1 | grep 'Host-only Interface' | awk -F',' '{print $2}' | awk -F' ' '{print $4}' | sed "s/'//g"`
 
 pkill VBoxHeadless
 sleep 10
