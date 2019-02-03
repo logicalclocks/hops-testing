@@ -1,5 +1,5 @@
 kouzant/hopsworks/airflow_fixes
-kouzant/hopsworks-chef/hopsworks_airflow
+tkakantousis/hopsworks-chef/airflow
 logicalclocks/conda-chef/airflow
 logicalclocks/kagent-chef/airflow
 logicalclocks/ndb-chef/airflow
