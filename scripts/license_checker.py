@@ -15,7 +15,7 @@ commit_regex_placeholder = "Changes to this file committed (before|after) and (n
                            "are released under the following license:"
 
 copyright_with_rise_regex = "Copyright \(C\) 2013 - 2018, Logical Clocks AB and RISE SICS AB\. All rights reserved"
-copyright_lc_regex = "Copyright \(C\) 2018, Logical Clocks AB\. All rights reserved"
+copyright_lc_regex = "Copyright \(C\) 20[0-9]{2}, Logical Clocks AB\. All rights reserved"
 
 
 def read_whitelist(whitelist_dir):
