@@ -1,2 +1,6 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/hopsworks/airflow_fixes
+tkakantousis/hopsworks-chef/airflow
+logicalclocks/conda-chef/airflow
+logicalclocks/kagent-chef/airflow
+logicalclocks/ndb-chef/airflow
+kouzant/airflow-chef/hopsworks_plugin
