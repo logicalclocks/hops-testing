@@ -21,6 +21,8 @@ attrs:
     use_defaults: "false"
   ndb:
     DataMemory: '256'
+  jupyter:
+    shutdown_timer_interval: "1m"
 groups:
   namenodes:
     size: 1
