@@ -1,6 +1,6 @@
-kouzant/hopsworks/airflow_fixes
-tkakantousis/hopsworks-chef/airflow
-logicalclocks/conda-chef/airflow
-logicalclocks/kagent-chef/airflow
-logicalclocks/ndb-chef/airflow
-kouzant/airflow-chef/hopsworks_plugin
+logicalclocks/hopsworks/HOPSWORKS-908
+logicalclocks/hopsworks-chef/HOPSWORKS-908
+logicalclocks/airflow-chef/HOPSWORKS-908
+logicalclocks/ndb-chef/HOPSWORKS-908
+logicalclocks/kagent-chef/HOPSWORKS-908
+logicalclocks/conda-chef/HOPSWORKS-908
