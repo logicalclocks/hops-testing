@@ -1,6 +1,6 @@
-logicalclocks/hopsworks/HOPSWORKS-908
-logicalclocks/hopsworks-chef/HOPSWORKS-908
-logicalclocks/airflow-chef/HOPSWORKS-908
-logicalclocks/ndb-chef/HOPSWORKS-908
-logicalclocks/kagent-chef/HOPSWORKS-908
-logicalclocks/conda-chef/HOPSWORKS-908
+kouzant/hopsworks/HOPSWORKS-908
+kouzant/hopsworks-chef/HOPSWORKS-908
+kouzant/airflow-chef/HOPSWORKS-908
+kouzant/ndb-chef/HOPSWORKS-908
+kouzant/kagent-chef/HOPSWORKS-908
+kouzant/conda-chef/HOPSWORKS-908
