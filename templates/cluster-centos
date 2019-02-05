@@ -58,3 +58,4 @@ groups:
       - hopsmonitor::telegraf
       - hive2
       - dela
+      - hops_airflow
