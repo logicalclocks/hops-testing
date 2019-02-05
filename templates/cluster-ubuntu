@@ -64,6 +64,7 @@ groups:
       - hive2
       - kagent::dev
       - dela
+      - hops_airflow
   datanode1:
     size: 1
     baremetal:
