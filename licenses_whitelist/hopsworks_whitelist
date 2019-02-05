@@ -84,3 +84,9 @@ hopsworks-web/yo/app/templates/modals.html
 hopsworks-web/yo/app/templates/navbar.html
 hopsworks-web/yo/app/templates/sidebar.html
 hopsworks-web/yo/app/templates/spinner.html
+hopsworks-web/pom.xml
+hopsworks-web/yo/app/views/airflow.html
+hopsworks-api/src/main/webapp/WEB-INF/web.xml
+hopsworks-web/yo/app/scripts/services/AirflowService.js
+hopsworks-api/src/main/java/io/hops/hopsworks/api/airflow/AirflowService.java
+hopsworks-web/src/main/java/io/hops/hopsworks/api/airflow/AngularFileManagerServlet.java
