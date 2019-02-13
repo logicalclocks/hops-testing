@@ -29,9 +29,11 @@ attrs:
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
-
   ndb:
     DataMemory: '256'
+  jupyter:
+    shutdown_timer_interval: "1m"
+
 
 groups:
   namenodes:
