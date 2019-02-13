@@ -1,2 +1,5 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+robzor92/hopsworks/HOPSWORKS-875
+robzor92/conda-chef/HOPSWORKS-875
+robzor92/tensorflow-chef/HOPSWORKS-875
+robzor92/kagent-chef/HOPSWORKS-875
+robzor92/hopsworks-chef/HOPSWORKS-875
