@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/hopsworks/HOPSWORKS-916-elk
+kouzant/kagent-chef/HOPSWORKS-916-elk
+kouzant/hopslog-chef/HOPSWORKS-916
+kouzant/elasticsearch-chef/HOPSWORKS-916
