@@ -22,10 +22,12 @@ attrs:
      crl_enabled: true
      crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
      crl_fetcher_interval: "5m"
+     certs_expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: true
   hopsworks:
      encryption_password: "verysecurepassword"
+     application_certificate_validity_period: "45m"
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
