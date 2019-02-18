@@ -17,10 +17,6 @@ attrs:
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
-  pypi:
-    index: "http://bbc2.sics.se:9000/root/pypi/"
-    index-url: "http://bbc2.sics.se:9000/root/pypi/+simple/"
-    trusted-host: "bbc2.sics.se"
   ndb:
     DataMemory: '256'
   jupyter:
