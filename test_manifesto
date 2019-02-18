@@ -1,2 +1,2 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+logicalclocks/hopsworks-chef/group_bug
+logicalclocks/airflow-chef/group_bug
