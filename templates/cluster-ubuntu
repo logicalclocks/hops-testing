@@ -22,13 +22,20 @@ attrs:
      crl_enabled: true
      crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
      crl_fetcher_interval: "5m"
+     certs_expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: true
   hopsworks:
      encryption_password: "verysecurepassword"
+     application_certificate_validity_period: "45m"
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
+  ndb:
+    DataMemory: '256'
+  jupyter:
+    shutdown_timer_interval: "1m"
+
 
 groups:
   namenodes:
@@ -50,6 +57,7 @@ groups:
       - zeppelin
       - hopsworks
       - hopsworks::dev
+      - hopsworks::migrate
       - hopsmonitor
       - tensorflow
       - hopslog
@@ -60,6 +68,7 @@ groups:
       - hive2
       - kagent::dev
       - dela
+      - hops_airflow
   datanode1:
     size: 1
     baremetal:

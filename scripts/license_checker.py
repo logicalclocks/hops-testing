@@ -15,7 +15,7 @@ commit_regex_placeholder = "Changes to this file committed (before|after) and (n
                            "are released under the following license:"
 
 copyright_with_rise_regex = "Copyright \(C\) 2013 - 2018, Logical Clocks AB and RISE SICS AB\. All rights reserved"
-copyright_lc_regex = "Copyright \(C\) 2018, Logical Clocks AB\. All rights reserved"
+copyright_lc_regex = "Copyright \(C\) 20[0-9]{2}, Logical Clocks AB\. All rights reserved"
 
 
 def read_whitelist(whitelist_dir):
@@ -70,7 +70,6 @@ def check_only_agpl(file_path, fork_commit):
            and len(matches_commit) == 0
 
 
-
 def check_double_license(file_path, fork_commit):
     content = get_file_content(file_path)
 
@@ -92,9 +91,8 @@ def check_double_license(file_path, fork_commit):
 def check_file(repo, file_rel_path, file_path, branch, shas, fork_commit, fork_commit_idx, lc_files):
     git_handle = repo.git
     git_handle.checkout(branch)
-    full_log = git_handle.log('--follow', file_path)
-    commit_list = re.findall("commit\ [a-z0-9]{40}", full_log)
-    revisions = [sha.split(" ")[1] for sha in commit_list]
+    commit_list = git_handle.log('--follow', '--format="%H"', file_path)
+    revisions = [s.replace('"', '') for s in commit_list.splitlines()]
 
     # The last commit is the oldest one
     first_commit_idx = shas.index(revisions[-1])
