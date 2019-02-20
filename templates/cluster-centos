@@ -14,8 +14,6 @@ attrs:
     conda_gc_interval: "10s"
     network:
       interface: eth0
-  hopsworks:
-    port: 8080
   conda:
     mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
     use_defaults: "false"
