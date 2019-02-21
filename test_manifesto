@@ -1,2 +1,3 @@
 logicalclocks/hopsworks-chef/group_bug
+logicalclocks/hops-hadoop-chef/group_bug
 logicalclocks/airflow-chef/group_bug
