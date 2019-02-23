@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/hopsworks/HOPSWORKS-953
+kouzant/kagent-chef/HOPSWORKS-953
+kouzant/airflow-chef/HOPSWORKS-953
