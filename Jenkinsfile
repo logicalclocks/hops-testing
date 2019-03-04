@@ -63,7 +63,7 @@ pipeline {
           }
           post {
             always {
-              stash(name: 'ubuntu', includes: 'out/ubuntu.xml')
+              stash(name: 'ubuntu', includes: 'out/*.xml')
               sh 'rm out/ubuntu.xml'
             }
           }
@@ -91,7 +91,7 @@ pipeline {
     always {
       unstash 'ubuntu'
       unstash 'centos'
-      junit 'out/ubuntu.xml,out/centos.xml'
+      junit 'out/*.xml'
       sh 'rm out/*'
     }
   }

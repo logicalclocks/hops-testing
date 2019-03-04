@@ -108,6 +108,8 @@ Vagrant.configure("2") do |config|
             "hopsworks" => {
               "repo" => "https://github.com/hopsworksjenkins/hopsworks",
               "branch" => "test_platform"
+              "test_dir" => "/home/vagrant/hopsworks/hopsworks-IT/src/test/ruby",
+              "frontend" => true 
             }
           }
         }
