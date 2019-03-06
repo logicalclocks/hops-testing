@@ -1,20 +1,22 @@
 #!/bin/bash
 set -e
 
+cd $HOME/workspace
+
 # Check if the repos directory is there
-if [ ! -d ../repos ]
+if [ ! -d repos ]
 then
   exit 0
 fi
 
-if [ -f ../test_manifesto ]
+if [ -f test_manifesto ]
 then
-  rm ../test_manifesto
+  rm test_manifesto
 fi
 
-for repo in ../repos/*/
-do
-  cd $repo
+cd repos
+for repo in */ ; do
+  cd $HOME/workspace/repos/$repo
   if [ "$(git branch --list test_platform)" ]
   then
     git reset --hard HEAD
@@ -25,5 +27,4 @@ do
       git push origin :test_platform
     fi
   fi
-  cd ..
 done
