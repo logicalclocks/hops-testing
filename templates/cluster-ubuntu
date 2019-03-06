@@ -18,13 +18,14 @@ attrs:
     num_replicas: 2
     tls:
      enabled: true
-     certs_actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppCertificateActions"
      crl_enabled: true
      crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
      crl_fetcher_interval: "5m"
      certs_expiration_safety_period: "30m"
+    rmappsecurity:
+     actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
     encrypt_data_transfer:
-     enabled: true
+     enabled: false
   hopsworks:
      encryption_password: "verysecurepassword"
      application_certificate_validity_period: "45m"
@@ -54,9 +55,7 @@ groups:
       - hadoop_spark::yarn
       - hadoop_spark::historyserver
       - flink::yarn
-      - zeppelin
       - hopsworks
-      - hopsworks::dev
       - hopsworks::migrate
       - hopsmonitor
       - tensorflow
@@ -67,7 +66,6 @@ groups:
       - kzookeeper
       - livy
       - hive2
-      - kagent::dev
       - dela
       - hops_airflow
   datanode1:
