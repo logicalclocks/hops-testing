@@ -24,7 +24,7 @@ attrs:
     rmappsecurity:
      actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
      x509:
-       certs_expiration_safety_period: "30m"
+       expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: false
   hopsworks:
