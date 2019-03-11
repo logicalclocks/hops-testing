@@ -21,9 +21,10 @@ attrs:
      crl_enabled: true
      crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
      crl_fetcher_interval: "5m"
-     certs_expiration_safety_period: "30m"
     rmappsecurity:
      actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+     x509:
+       certs_expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: false
   hopsworks:
