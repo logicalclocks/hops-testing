@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
     hopsworks2.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      v.customize ["modifyvm", :id, "--memory", 8192]
+      v.customize ["modifyvm", :id, "--memory", 12288]
       v.customize ["modifyvm", :id, "--name", "ubuntu2"]
       v.customize ["modifyvm", :id, "--cpus", "4"]
     end
@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
 
     hopsworks1.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      v.customize ["modifyvm", :id, "--memory", 8192]
+      v.customize ["modifyvm", :id, "--memory", 12288]
       v.customize ["modifyvm", :id, "--name", "ubuntu1"]
       v.customize ["modifyvm", :id, "--cpus", "4"]
     end
