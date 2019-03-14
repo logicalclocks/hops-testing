@@ -29,24 +29,6 @@ groups:
   namenodes:
     size: 1
     baremetal:
-      ip: 192.168.56.101
-    recipes:
-      - kagent
-      - conda
-      - ndb::mgmd
-      - ndb::mysqld
-      - hops::ndb
-      - hops::rm
-      - hops::nn
-      - hops::jhs
-      - hadoop_spark::yarn
-      - hadoop_spark::historyserver
-      - flink::yarn
-      - hopsworks
-groups:
-  namenodes:
-    size: 1
-    baremetal:
       ip: 10.0.2.15
     recipes:
       - kagent
