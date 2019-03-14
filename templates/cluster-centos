@@ -21,6 +21,28 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  hadoop_spark:
+    hopsutil:
+      url: "http://snurran.sics.se/hops/hopsutil/0.10.0-SNAPSHOT/hops-util-0.10.0-SNAPSHOT.jar"
+
+groups:
+  namenodes:
+    size: 1
+    baremetal:
+      ip: 192.168.56.101
+    recipes:
+      - kagent
+      - conda
+      - ndb::mgmd
+      - ndb::mysqld
+      - hops::ndb
+      - hops::rm
+      - hops::nn
+      - hops::jhs
+      - hadoop_spark::yarn
+      - hadoop_spark::historyserver
+      - flink::yarn
+      - hopsworks
 groups:
   namenodes:
     size: 1

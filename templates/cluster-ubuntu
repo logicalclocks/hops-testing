@@ -26,7 +26,7 @@ attrs:
      x509:
        expiration_safety_period: "30m"
     encrypt_data_transfer:
-     enabled: false
+     enabled: true
   hopsworks:
      encryption_password: "verysecurepassword"
      application_certificate_validity_period: "45m"
@@ -37,6 +37,9 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  hadoop_spark:
+    hopsutil:
+      url: "http://snurran.sics.se/hops/hopsutil/0.10.0-SNAPSHOT/hops-util-0.10.0-SNAPSHOT.jar"
 
 
 groups:
