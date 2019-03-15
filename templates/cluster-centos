@@ -21,9 +21,9 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
-  hadoop_spark:
-    hopsutil:
-      url: "http://snurran.sics.se/hops/hopsutil/0.10.0-SNAPSHOT/hops-util-0.10.0-SNAPSHOT.jar"
+  hops:
+    rmappsecurity:
+      actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
 
 groups:
   namenodes:
@@ -50,7 +50,6 @@ groups:
       - kkafka
       - epipe
       - hopsworks
-      - hopsworks::dev
       - hopsworks::migrate
       - hopsmonitor
       - hopslog

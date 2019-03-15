@@ -37,9 +37,6 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
-  hadoop_spark:
-    hopsutil:
-      url: "http://snurran.sics.se/hops/hopsutil/0.10.0-SNAPSHOT/hops-util-0.10.0-SNAPSHOT.jar"
 
 
 groups:

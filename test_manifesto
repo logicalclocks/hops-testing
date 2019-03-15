@@ -1,5 +1,2 @@
-siroibaf/hopsworks/HOPSWORKS-715
-siroibaf/hopsworks-chef/HOPSWORKS-715
-siroibaf/kagent-chef/HOPSWORKS-715
-kouzant/hops-hadoop-chef/HOPSWORKS-837
-siroibaf/ndb-chef/HOPSWORKS-939
+logicalclocks/hopsworks/master
+logicalclocks/hopsworks-chef/master
