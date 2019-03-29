@@ -15,7 +15,9 @@ attrs:
     network:
       interface: eth0
   conda:
-    mirror_list: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
+    channels:
+      default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
+      pytorch: "http://bbc2.sics.se:8000/pytorch"
     use_defaults: "false"
   ndb:
     DataMemory: '256'
