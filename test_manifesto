@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+Limmen/hopsworks/HOPSWORKS-998
+Limmen/tensorflow-chef/HOPSWORKS-998
+Limmen/kagent-chef/HOPSWORKS-998
