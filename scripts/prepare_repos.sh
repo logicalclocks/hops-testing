@@ -7,7 +7,7 @@ cd ..
 
 # List of cookbooks and hopsworks repos
 repos=(hopsworks hopsworks-chef conda-chef kagent-chef hops-hadoop-chef
-	   spark-chef flink-chef zeppelin-chef livy-chef ndb-chef
+	   spark-chef flink-chef livy-chef ndb-chef
 	   dr-elephant-chef tensorflow-chef epipe-chef dela-chef
 	   kzookeeper kafka-cookbook elasticsearch-chef hopslog-chef
 	   hopsmonitor-chef chef-glassfish chef-ulimit hive-chef airflow-chef)
