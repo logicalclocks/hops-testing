@@ -24,8 +24,6 @@ attrs:
   jupyter:
     shutdown_timer_interval: "1m"
   hopsworks:
-    encryption_password: "verysecurepassword"
-    application_certificate_validity_period: "45m"
     kagent_liveness:
       enabled: true
       threshold: "5s"
