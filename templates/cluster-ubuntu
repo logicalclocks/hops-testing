@@ -30,6 +30,9 @@ attrs:
   hopsworks:
      encryption_password: "verysecurepassword"
      application_certificate_validity_period: "45m"
+     kagent_liveness:
+      enabled: true
+      threshold: "5s"
   conda:
     channels:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"

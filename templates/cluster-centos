@@ -23,6 +23,12 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  hopsworks:
+    encryption_password: "verysecurepassword"
+    application_certificate_validity_period: "45m"
+    kagent_liveness:
+      enabled: true
+      threshold: "5s"
   hops:
     rmappsecurity:
       actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
