@@ -26,7 +26,7 @@ attrs:
   hopsworks:
     kagent_liveness:
       enabled: true
-      threshold: "5s"
+      threshold: "10s"
   hops:
     rmappsecurity:
       actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
