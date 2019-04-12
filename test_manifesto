@@ -1,2 +1,6 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+robzor92/hopsworks/rocm
+robzor92/hopsworks-chef/rocm
+robzor92/conda-chef/rocm
+robzor92/tensorflow-chef/rocm
+robzor92/kagent-chef/rocm
+robzor92/hops-hadoop-chef/rocm
