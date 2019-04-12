@@ -33,6 +33,8 @@ attrs:
     kagent_liveness:
      enabled: true
      threshold: "10s"
+    jwt:
+     lifetime_ms: '43200000'
   conda:
     channels:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
