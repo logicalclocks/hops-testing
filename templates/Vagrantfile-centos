@@ -42,7 +42,8 @@ Vagrant.configure("2") do |config|
           "test" => {
             "hopsworks" => {
               "repo" => "https://github.com/hopsworksjenkins/hopsworks",
-              "branch" => "test_platform"
+              "branch" => "test_platform",
+	      "it" => false
             }
           }
         }
