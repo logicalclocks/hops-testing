@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/hopsworks/HOPSWORKS-1033
+kouzant/hopsworks-chef/HOPSWORKS-1033
+kouzant/kagent-chef/HOPSWORKS-1033
+kouzant/hops-hadoop-chef/HOPSWORKS-1033
