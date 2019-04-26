@@ -15,6 +15,11 @@ attrs:
     conda_gc_interval: "10s"
     network:
       interface: eth0
+    hops-util-py:
+      install_mode: "git"
+      branch: "HOPSWORKS-1057"
+      repo: "robzor92"
+      version: "0.9.0.0"
   conda:
     channels:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
