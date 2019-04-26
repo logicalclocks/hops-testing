@@ -6,6 +6,7 @@ cookbooks:
   hopsworks:
     github: "hopsworksjenkins/hopsworks-chef"
     branch: "test_platform"
+    "it" => true
 
 attrs:
   install:
