@@ -32,6 +32,9 @@ attrs:
       threshold: "10s"
     jwt:
       lifetime_ms: '43200000'
+  hadoop_spark:
+    hopsutil:
+      url: http://snurran.sics.se/hops/kim/hops-util-0.10.0-SNAPSHOT.jar
 
 groups:
   namenodes:
