@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+logicalclocks/hopsworks-chef/mysql_bug
+logicalclocks/kagent-chef/mysql_bug
+logicalclocks/airflow-chef/mysql_bug
