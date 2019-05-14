@@ -32,6 +32,11 @@ attrs:
       threshold: "10s"
     jwt:
       lifetime_ms: '43200000'
+  conda:
+    hops-util-py:
+      install-mode: "git"
+      branch: "HOPSWORKS-1073"
+      repo: "robzor92"
 
 groups:
   namenodes:

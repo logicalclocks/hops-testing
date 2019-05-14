@@ -44,6 +44,11 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  conda:
+    hops-util-py:
+      install-mode: "git"
+      branch: "HOPSWORKS-1073"
+      repo: "robzor92"
 
 
 groups:
