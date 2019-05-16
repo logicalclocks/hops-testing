@@ -25,3 +25,6 @@ This will generate a new commit for hopsworks-chef for your branch with the Berk
 ./scripts/generate_test_manifesto.sh rollback <branchname> reverts the Berksfile master changes.
 
 This will generate a new commit for hopsworks-chef for your branch with the Berksfile references all set back to '<branchname>', so you can run Vagrant again.
+
+## Integration Tests
+Some tests don't need to run with every testing instance, as they take too much time to complete and the testing pipeline is slowed down. To run *only* these tests, in your hops-testing pull request you need to set the `"it" => false` property to `"it" => true` in **both** ` hops-testing/templates/Vagrantfile-centos` and ` hops-testing/templates/Vagrantfile-ubuntu` files.
