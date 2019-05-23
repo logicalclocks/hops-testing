@@ -1,4 +1,12 @@
-logicalclocks/hopsworks/maggymagic
-logicalclocks/hopsworks-chef/maggymagic
-logicalclocks/conda-chef/maggymagic
-logicalclocks/tensorflow-chef/maggymagic
+logicalclocks/hopsworks-chef/systemd_deps
+logicalclocks/kagent-chef/systemd_deps
+logicalclocks/hops-hadoop-chef/systemd_deps
+logicalclocks/ndb-chef/systemd_deps
+logicalclocks/spark-chef/systemd_deps
+logicalclocks/epipe-chef/systemd_deps
+logicalclocks/kafka-cookbook/systemd_deps
+logicalclocks/hopslog-chef/systemd_deps
+logicalclocks/hopsmonitor-chef/systemd_deps
+logicalclocks/chef-glassfish/systemd_deps
+logicalclocks/airflow-chef/systemd_deps
+logicalclocks/hive-chef/systemd_deps
