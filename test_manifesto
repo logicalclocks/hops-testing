@@ -1,4 +1,6 @@
-logicalclocks/hopsworks-chef/mysql_bug
-logicalclocks/kagent-chef/mysql_bug
-logicalclocks/hops-hadoop-chef/mysql_bug
-logicalclocks/airflow-chef/mysql_bug
+logicalclocks/hopsworks-chef/localhost
+logicalclocks/conda-chef/localhost
+logicalclocks/kagent-chef/localhost
+logicalclocks/kafka-cookbook/localhost
+logicalclocks/airflow-chef/localhost
+logicalclocks/hive-chef/localhost
