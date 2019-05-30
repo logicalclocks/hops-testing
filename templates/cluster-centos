@@ -61,6 +61,7 @@ groups:
       - epipe
       - hopsworks
       - hopsworks::migrate
+      - hopsworks::restart
       - hopsmonitor
       - hopslog
       - hopslog::_filebeat-spark
