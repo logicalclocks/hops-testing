@@ -27,6 +27,9 @@ attrs:
        expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: true
+  hadoop_spark:
+    hopsutil:
+      url: http://snurran.sics.se/hops/hops-util-0.10.0-SNAPSHOT-theo.jar
   hopsworks:
     encryption_password: "verysecurepassword"
     application_certificate_validity_period: "45m"

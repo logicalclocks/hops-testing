@@ -26,6 +26,9 @@ attrs:
   hops:
     rmappsecurity:
       actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+  hadoop_spark:
+    hopsutil:
+      url: http://snurran.sics.se/hops/hops-util-0.10.0-SNAPSHOT-theo.jar
   hopsworks:
     kagent_liveness:
       enabled: true
