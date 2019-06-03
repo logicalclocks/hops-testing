@@ -68,7 +68,6 @@ groups:
       - flink::yarn
       - hopsworks
       - hopsworks::migrate
-      - hopsworks::restart
       - hopsmonitor
       - tensorflow
       - hopslog
