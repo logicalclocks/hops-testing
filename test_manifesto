@@ -1,6 +1,11 @@
+jimdowling/hopsworks/localhost
 logicalclocks/hopsworks-chef/localhost
 logicalclocks/conda-chef/localhost
 logicalclocks/kagent-chef/localhost
+logicalclocks/hops-hadoop-chef/localhost
+logicalclocks/ndb-chef/localhost
+logicalclocks/spark-chef/localhost
+logicalclocks/tensorflow-chef/localhost
 logicalclocks/kafka-cookbook/localhost
+logicalclocks/hopsmonitor-chef/localhost
 logicalclocks/airflow-chef/localhost
-logicalclocks/hive-chef/localhost
