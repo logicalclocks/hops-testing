@@ -25,6 +25,7 @@ attrs:
     rmappsecurity:
       actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
   hopsworks:
+    encryption_password: "verysecurepassword"
     kagent_liveness:
       enabled: true
       threshold: "10s"
