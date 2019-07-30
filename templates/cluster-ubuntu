@@ -41,10 +41,17 @@ attrs:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
       pytorch: "http://bbc2.sics.se:8000/pytorch"
     use_defaults: "false"
+    hops-util-py:
+      install-mode: "git"
+      branch: "HOPSWORKS-1196"
+      repo: "Limmen"
   ndb:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  hadoop_spark:
+    hopsutil:
+      url: http://snurran.sics.se/hops/kim/hops-util-1.0.0-SNAPSHOT.jar
 
 
 groups:
