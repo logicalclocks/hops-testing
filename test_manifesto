@@ -1,2 +1,7 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+tkakantousis/hopsworks/hops-flink-1.8.0
+tkakantousis/flink-chef/HOPSWORKS-640
+tkakantousis/elasticsearch-chef/tfx
+tkakantousis/hopslog-chef/tfx
+tkakantousis/kagent-chef/HOPSWORKS-640
+tkakantousis/conda-chef/tfx
+tkakantousis/tensorflow-chef/tfx
