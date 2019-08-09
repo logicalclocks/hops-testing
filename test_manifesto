@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/tensorflow-chef/master
+maismail/hopsworks/HOPSWORKS-1054
+maismail/hopsworks-chef/HOPSWORKS-1054
+maismail/epipe-chef/test_jira
