@@ -34,6 +34,10 @@ attrs:
     hive2:
       scratch_dir_delay: "30s"
       scratch_dir_cleaner_interval: "10s"
+  hadoop_spark:
+    hopsutil_version: "1.0.0-SNAPSHOT"
+    hopsutil:
+      url: http://snurran.sics.se/hops/kajetan/hops-util-1.0.0-SNAPSHOT.jar
 
 groups:
   namenodes:
