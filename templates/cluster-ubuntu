@@ -41,6 +41,10 @@ attrs:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
       pytorch: "http://bbc2.sics.se:8000/pytorch"
     use_defaults: "false"
+    hops-util-py:
+      install-mode: "git"
+      repo: "steffengr"
+      branch: "HOPSWORKS-1231"
   ndb:
     DataMemory: '256'
   jupyter:
