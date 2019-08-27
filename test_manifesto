@@ -1,4 +1,4 @@
-logicalclocks/hopsworks-chef/mysql_bug
-logicalclocks/kagent-chef/mysql_bug
-logicalclocks/hops-hadoop-chef/mysql_bug
-logicalclocks/airflow-chef/mysql_bug
+jimdowling/hopsworks/db_proj
+logicalclocks/hopsworks-chef/db_proj
+logicalclocks/kagent-chef/db_proj
+logicalclocks/ndb-chef/db_proj
