@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--memory", 8192]
       v.customize ["modifyvm", :id, "--name", "ubuntu2"]
       v.customize ["modifyvm", :id, "--cpus", "4"]
+      v.customize ["modifyvm", :id, "--vrde", "on"]
+      v.customize ["modifyvm", :id, "--vrdeproperty", "TCP/Ports=5949"]
     end
 
     hopsworks2.vm.provision :chef_solo do |chef|
@@ -45,6 +47,8 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--memory", 8192]
       v.customize ["modifyvm", :id, "--name", "ubuntu1"]
       v.customize ["modifyvm", :id, "--cpus", "4"]
+      v.customize ["modifyvm", :id, "--vrde", "on"]
+      v.customize ["modifyvm", :id, "--vrdeproperty", "TCP/Ports=5948"]
     end
 
     hopsworks1.vm.provision :chef_solo do |chef|
@@ -94,6 +98,8 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--nictype1", "virtio"]
       v.customize ["modifyvm", :id, "--name", "ubuntu0"]
       v.customize ["modifyvm", :id, "--cpus", "8"]
+      v.customize ["modifyvm", :id, "--vrde", "on"]
+      v.customize ["modifyvm", :id, "--vrdeproperty", "TCP/Ports=5947"]
     end
 
     hopsworks0.vm.provision :chef_solo do |chef|
