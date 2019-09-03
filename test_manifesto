@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/tensorflow-chef/master
+steffengr/spark-chef/HOPSWORKS-453
+steffengr/livy-chef/HOPSWORKS-453
+steffengr/hopsworks/HOPSWORKS-453

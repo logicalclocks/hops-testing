@@ -34,6 +34,8 @@ attrs:
     hive2:
       scratch_dir_delay: "30s"
       scratch_dir_cleaner_interval: "10s"
+  livy:
+    url: http://snurran.sics.se/hops/steffen/livy/apache-livy-0.6.1.0-bin.zip
 
 groups:
   namenodes:

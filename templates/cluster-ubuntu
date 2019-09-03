@@ -45,6 +45,8 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  livy:
+    url: http://snurran.sics.se/hops/steffen/livy/apache-livy-0.6.1.0-bin.zip
 
 
 groups:
