@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/tensorflow-chef/master
+Limmen/hopsworks/HOPSWORKS-34
+Limmen/spark-chef/HOPSWORKS-34
+Limmen/hive-chef/HOPSWORKS-34
