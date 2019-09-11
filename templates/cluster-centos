@@ -34,6 +34,12 @@ attrs:
     hive2:
       scratch_dir_delay: "30s"
       scratch_dir_cleaner_interval: "10s"
+  alertmanager:
+    email:
+      to: sre@logicalclocks.com
+      from: hopsworks@logicalclocks.com
+      smtp_host: mail.hello.com
+
 
 groups:
   namenodes:
@@ -68,7 +74,11 @@ groups:
       - hops::dn
       - hops::nm
       - tensorflow
-      - hopsmonitor::telegraf
       - hive2
       - dela
       - hops_airflow
+      - hopsmonitor::prometheus
+      - hopsmonitor::alertmanager
+      - hopsmonitor::node_exporter
+      - hopsmonitor::purge_telegraf
+
