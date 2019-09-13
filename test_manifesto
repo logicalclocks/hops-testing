@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/tensorflow-chef/master
+siroibaf/hopsworks/HOPSWORKS-1268
+siroibaf/hopsworks-chef/HOPSWORKS-1268
+siroibaf/kagent-chef/HOPSWORKS-1268
