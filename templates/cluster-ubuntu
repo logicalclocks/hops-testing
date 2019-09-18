@@ -45,6 +45,11 @@ attrs:
     DataMemory: '256'
   jupyter:
     shutdown_timer_interval: "1m"
+  alertmanager:
+    email:
+      to: sre@logicalclocks.com
+      from: hopsworks@logicalclocks.com
+      smtp_host: mail.hello.com
 
 
 groups:
@@ -71,7 +76,10 @@ groups:
       - hopslog
       - hopslog::_filebeat-serving
       - hopslog::_filebeat-kagent
-      - hopsmonitor::telegraf
+      - hopsmonitor::prometheus
+      - hopsmonitor::alertmanager
+      - hopsmonitor::node_exporter
+      - hopsmonitor::purge_telegraf
       - kzookeeper
       - livy
       - hive2
@@ -93,10 +101,11 @@ groups:
       - kzookeeper
       - epipe
       - hadoop_spark::yarn
-      - hopsmonitor::telegraf
       - hopslog::_filebeat-spark
       - hopslog::_filebeat-kagent
       - tensorflow
+      - hopsmonitor::node_exporter
+      - hopsmonitor::purge_telegraf
   datanode2:
     size: 1
     baremetal:
@@ -111,7 +120,8 @@ groups:
       - hops::nm
       - kkafka
       - hadoop_spark::yarn
-      - hopsmonitor::telegraf
       - hopslog::_filebeat-spark
       - hopslog::_filebeat-kagent
       - tensorflow
+      - hopsmonitor::node_exporter
+      - hopsmonitor::purge_telegraf
