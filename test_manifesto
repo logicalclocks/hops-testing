@@ -1,12 +1,2 @@
-siroibaf/hopsworks/prom
-siroibaf/hopsworks-chef/prom
-siroibaf/kagent-chef/prom
-siroibaf/hops-hadoop-chef/prom
-siroibaf/ndb-chef/prom
-siroibaf/spark-chef/prom
-siroibaf/epipe-chef/prom
-siroibaf/kafka-cookbook/prom
-siroibaf/elasticsearch-chef/prom
-siroibaf/hopsmonitor-chef/prom
-siroibaf/airflow-chef/prom
-siroibaf/hive-chef/prom
+logicalclocks/hopsworks/master
+logicalclocks/hopsworks-chef/master
