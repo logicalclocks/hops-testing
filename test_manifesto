@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/hopsworks/HOPSWORKS-1265
+kouzant/hopsworks-chef/HOPSWORKS-1265
+kouzant/spark-chef/HOPSWORKS-1265
