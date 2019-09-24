@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+Limmen/hopsworks/HOPSWORKS-1140
+Limmen/hopsworks-chef/HOPSWORKS-1140
+Limmen/kagent-chef/HOPSWORKS-1140
+Limmen/ndb-chef/HOPSWORKS-1140
