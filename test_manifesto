@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+maismail/hopsworks/HOPSWORKS-1027
+maismail/hopsworks-chef/HOPSWORKS-1027
+maismail/elasticsearch-chef/HOPSWORKS-1027
