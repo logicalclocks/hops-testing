@@ -17,6 +17,10 @@ attrs:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
       pytorch: "http://bbc2.sics.se:8000/pytorch"
     use_defaults: "false"
+    hops-util-py:
+      install-mode: "git"
+      branch: "HOPSWORKS-1141"
+      repo: "Limmen"
   ndb:
     DataMemory: '256'
   jupyter:
@@ -26,6 +30,7 @@ attrs:
       actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
   hopsworks:
     encryption_password: "verysecurepassword"
+    featurestore_online: true
     kagent_liveness:
       enabled: true
       threshold: "10s"
@@ -39,7 +44,13 @@ attrs:
       to: sre@logicalclocks.com
       from: hopsworks@logicalclocks.com
       smtp_host: mail.hello.com
-
+  hadoop_spark:
+    hopsutil:
+      url: "http://snurran.sics.se/hops/kim/hops-util-1.0.0-SNAPSHOT.jar"
+    hopsexamples_featurestore_tour:
+      url: "http://snurran.sics.se/hops/kim/hops-examples-featurestore-tour-1.0.0-SNAPSHOT.jar"
+    hopsexamples_featurestore_util4j:
+      url: "http://snurran.sics.se/hops/kim/hops-examples-featurestore-util4j-1.0.0-SNAPSHOT.jar"
 
 groups:
   namenodes:
@@ -81,4 +92,3 @@ groups:
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
-
