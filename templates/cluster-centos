@@ -26,8 +26,18 @@ attrs:
   jupyter:
     shutdown_timer_interval: "1m"
   hops:
+    num_replicas: 2
+    tls:
+     enabled: true
+     crl_enabled: true
+     crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
+     crl_fetcher_interval: "5m"
     rmappsecurity:
-      actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+     actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+     x509:
+       expiration_safety_period: "30m"
+    encrypt_data_transfer:
+     enabled: true
   hopsworks:
     encryption_password: "verysecurepassword"
     featurestore_online: true
