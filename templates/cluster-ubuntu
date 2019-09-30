@@ -48,6 +48,8 @@ attrs:
       repo: "Limmen"
   ndb:
     DataMemory: '256'
+  mysql:
+    tls: 'true'
   jupyter:
     shutdown_timer_interval: "1m"
   alertmanager:
