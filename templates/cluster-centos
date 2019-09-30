@@ -58,7 +58,9 @@ groups:
       - hops::jhs
       - hadoop_spark::yarn
       - hadoop_spark::historyserver
+      - flink
       - flink::yarn
+      - flink::historyserver
       - elastic
       - livy
       - kzookeeper
