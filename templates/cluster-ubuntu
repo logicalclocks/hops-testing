@@ -68,6 +68,7 @@ groups:
       - hops::jhs
       - hadoop_spark::yarn
       - hadoop_spark::historyserver
+      - hadoop_spark::certs
       - flink
       - flink::yarn
       - flink::historyserver
@@ -103,6 +104,7 @@ groups:
       - kzookeeper
       - epipe
       - hadoop_spark::yarn
+      - hadoop_spark::certs
       - flink
       - flink::yarn
       - hopslog::_filebeat-spark
@@ -124,6 +126,7 @@ groups:
       - hops::nm
       - kkafka
       - hadoop_spark::yarn
+      - hadoop_spark::certs
       - flink
       - flink::yarn
       - hopslog::_filebeat-spark
