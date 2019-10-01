@@ -40,6 +40,10 @@ attrs:
     channels:
       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
       pytorch: "http://bbc2.sics.se:8000/pytorch"
+    hops-util-py:
+      install-mode: "git"
+      repo: "tkakantousis"
+      branch: "HOPSWORKS-1021"
     use_defaults: "false"
   ndb:
     DataMemory: '256'
