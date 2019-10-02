@@ -69,7 +69,7 @@ groups:
       - hops::jhs
       - hadoop_spark::yarn
       - hadoop_spark::historyserver
-      - flink
+      - hadoop_spark::certs
       - flink::yarn
       - flink::historyserver
       - hopsworks
@@ -79,6 +79,7 @@ groups:
       - hopslog
       - hopslog::_filebeat-serving
       - hopslog::_filebeat-kagent
+      - hopslog::_filebeat-beam
       - hopsmonitor::prometheus
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
@@ -104,10 +105,11 @@ groups:
       - kzookeeper
       - epipe
       - hadoop_spark::yarn
-      - flink
+      - hadoop_spark::certs
       - flink::yarn
       - hopslog::_filebeat-spark
       - hopslog::_filebeat-kagent
+      - hopslog::_filebeat-beam
       - tensorflow
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
@@ -125,10 +127,11 @@ groups:
       - hops::nm
       - kkafka
       - hadoop_spark::yarn
-      - flink
+      - hadoop_spark::certs
       - flink::yarn
       - hopslog::_filebeat-spark
       - hopslog::_filebeat-kagent
+      - hopslog::_filebeat-beam
       - tensorflow
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
