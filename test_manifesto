@@ -1,2 +1,7 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/conda-chef/HOPSWORKS-1331
+kouzant/ndb-chef/HOPSWORKS-1331
+kouzant/elasticsearch-chef/HOPSWORKS-1331
+kouzant/hive-chef/HOPSWORKS-1331
+kouzant/hopslog-chef/HOPSWORKS-1331
+kouzant/hopsworks-chef/HOPSWORKS-1331
+kouzant/kagent-chef/HOPSWORKS-1331
