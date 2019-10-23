@@ -12,6 +12,15 @@ attrs:
     dir: /srv/hops
   kagent:
     conda_gc_interval: "10s"
+  conda:
+    channels:
+      default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc  2.sics.se:8000/pkgs/main/noarch"
+      pytorch: "http://bbc2.sics.se:8000/pytorch"
+    use_defaults: "false"
+    hops-util-py:
+      install-mode: "git"
+      branch: "HOPSWORKS-1376"
+      repo: "kai-chi"
   hops:
     num_replicas: 2
     tls:
@@ -46,7 +55,9 @@ attrs:
       to: sre@logicalclocks.com
       from: hopsworks@logicalclocks.com
       smtp_host: mail.hello.com
-
+  hadoop_spark:
+    hopsutil:
+      url: http://snurran.sics.se/hops/kajetan/hops-util-1.1.0-SNAPSHOT.jar
 
 groups:
   namenodes:
