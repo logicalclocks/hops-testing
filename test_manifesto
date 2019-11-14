@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+tkakantousis/hopsworks/HOPSWORKS-1356
+tkakantousis/hopsworks-chef/HOPSWORKS-1356 
+tkakantousis/airflow-chef/HOPSWORKS-1356
