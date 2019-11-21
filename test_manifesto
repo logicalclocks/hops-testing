@@ -1,2 +1,6 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+berthoug/hive-chef/HOPSWORKS-1425
+berthoug/spark-chef/HOPSWORKS-1425
+berthoug/hops-hadoop-chef/HOPSWORKS-1425
+maismail/epipe-chef/HOPSWORKS-1250
+ErmiasG/hopsworks-chef/HOPSWORKS-229
+ErmiasG/hopsworks/HOPSWORKS-229-rebased-on-master
