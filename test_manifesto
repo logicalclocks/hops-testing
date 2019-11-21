@@ -1,2 +1,2 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+steffengr/spark-chef/HOPSWORKS-1347
+logicalclocks/hive-chef/HOPSWORKS-1347
