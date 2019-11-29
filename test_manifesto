@@ -1,2 +1,6 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+berthoug/kagent-chef/HOPSWORKS-1457
+berthoug/elasticsearch-chef/HOPSWORKS-1457
+berthoug/hops-hadoop-chef/HOPSWORKS-1457
+berthoug/hopslog-chef/HOPSWORKS-1457
+berthoug/spark-chef/HOPSWORKS-1457
+berthoug/flink-chef/HOPSWORKS-1457
