@@ -33,14 +33,10 @@ do
   cd ..
 done
 
-# exit repos dir
-cd ..
-
-# Emacs by default doesn't add a new line at the end of the file.
 # This means, for instance, that wc -l shows a n-1 number of lines
 # The next part of the script assumes that bash can count the number of lines correctly
 # The following is a trick to add the newline at the end, if it doesn't exist
-sed -i '$a\' test_manifesto
+sed -i '$a\' ../test_manifesto
 
 # Parse the test specification file
 while IFS= read -r line
@@ -52,7 +48,7 @@ do
   cd $repo
   git pull --no-edit git://github.com/$org/$repo.git $branch
   cd ..
-done <"test_manifesto"
+done <"../test_manifesto"
 
 # Replace all the Berksfile links from
 find . -type f -name "Berksfile" -exec  sed -i 's/logicalclocks/hopsworksjenkins/g' {} \;
