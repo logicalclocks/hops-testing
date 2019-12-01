@@ -3,7 +3,6 @@
 set -e
 
 # Check if virtualenv has been created
-cd ..
 if [ ! -d license_checker_env ]
 then
   virtualenv -p python3.6 license_checker_env
