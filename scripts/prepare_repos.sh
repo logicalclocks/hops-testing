@@ -79,6 +79,6 @@ do
     exit 1
   fi
 
-  git push origin test_platform
+  git push origin $BUILD_NUMBER 
   cd ..
 done
