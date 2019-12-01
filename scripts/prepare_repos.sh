@@ -33,6 +33,9 @@ do
   cd ..
 done
 
+# exit repos dir
+cd ..
+
 # Emacs by default doesn't add a new line at the end of the file.
 # This means, for instance, that wc -l shows a n-1 number of lines
 # The next part of the script assumes that bash can count the number of lines correctly
