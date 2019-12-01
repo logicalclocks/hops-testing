@@ -16,6 +16,8 @@ else
   cp templates/cluster-centos karamel-chef/cluster.yml
 fi
 
+sed -i "s/test_platform/$BUILD_NUMBER/g" karamel-chef/cluster.yml
+
 # Execute the tests
 cd karamel-chef
 sh ./test.sh

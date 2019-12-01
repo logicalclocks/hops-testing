@@ -1,10 +1,6 @@
 #!/bin/bash
 set -e
 
-# Do everything directly in the workspace so it's easier to clean
-cp test_manifesto ..
-cd ..
-
 # List of cookbooks and hopsworks repos
 repos=(hopsworks hopsworks-chef conda-chef kagent-chef hops-hadoop-chef
 	   spark-chef flink-chef livy-chef ndb-chef
@@ -33,7 +29,7 @@ do
 
   # Update the repositories
   git pull upstream master
-  git checkout -b test_platform
+  git checkout -b $BUILD_NUMBER 
   cd ..
 done
 
@@ -41,7 +37,7 @@ done
 # This means, for instance, that wc -l shows a n-1 number of lines
 # The next part of the script assumes that bash can count the number of lines correctly
 # The following is a trick to add the newline at the end, if it doesn't exist
-sed -i '$a\' ../test_manifesto
+sed -i '$a\' test_manifesto
 
 # Parse the test specification file
 while IFS= read -r line
@@ -53,11 +49,11 @@ do
   cd $repo
   git pull --no-edit git://github.com/$org/$repo.git $branch
   cd ..
-done <"../test_manifesto"
+done <"test_manifesto"
 
 # Replace all the Berksfile links from
 find . -type f -name "Berksfile" -exec  sed -i 's/logicalclocks/hopsworksjenkins/g' {} \;
-find . -type f -name "Berksfile" -exec  sed -i 's/master/test_platform/g' {} \;
+find . -type f -name "Berksfile" -exec  sed -i "s/master/$BUILD_NUMBER/g" {} \;
 
 # Push everything
 for repo in "${repos[@]}"
@@ -72,7 +68,7 @@ do
   fi
 
   # Check if there are some wild dependencies.
-  if cat Berksfile | grep github: | grep -v test_platform
+  if cat Berksfile | grep github: | grep -v $BUILD_NUMBER 
   then
     echo "$repo has non-master dependencies"
     exit 1
