@@ -1,21 +1,18 @@
 #!/bin/bash
 set -e
 
-# No Op for the moment
-
-# cd $HOME/workspace
-# 
-# cd repos
-# for repo in */ ; do
-#   cd $HOME/workspace/repos/$repo
-#   if [ "$(git branch --list test_platform)" ]
-#   then
-#     git reset --hard HEAD
-#     git checkout master
-#     git branch -D test_platform
-#     if [ "$(git show-branch remotes/origin/test_platform)" ]
-#     then
-#       git push origin :test_platform
-#     fi
-#   fi
-# done
+cd repos
+for repo in */ ; do
+  cd $repo
+  git fetch origin
+  if [ "$(git branch --list $BUILD_NUMBER)" ]
+  then
+    git reset --hard HEAD
+    git checkout master
+    git branch -D $BUILD_NUMBER
+    if [ "$(git show-branch remotes/origin/$BUILD_NUMBER)" ]
+    then
+      git push origin :$BUILD_NUMBER
+    fi
+  fi
+done
