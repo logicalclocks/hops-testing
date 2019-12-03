@@ -18,6 +18,7 @@ else
 fi
 
 sed -i "s/centos-name/centos-$BUILD_NUMBER/g" karamel-chef/Vagrantfile
+sed -i "s/BRANCH/$BUILD_NUMBER/g" karamel-chef/Vagrantfile
 
 # Execute the tests
 cd karamel-chef
