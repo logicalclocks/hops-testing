@@ -1,14 +1,14 @@
 pipeline {
   agent {
     node {
-      label 'fabio_setup'
+      label 'platform_testing'
     }
   }
   stages {
     stage('prepareRepos') {
       agent {
         node {
-          label 'fabio_setup'
+          label 'platform_testing'
         }
       }
       steps {
@@ -18,7 +18,7 @@ pipeline {
     stage('checkLicenses') {
       agent {
         node {
-          label 'fabio_setup'
+          label 'platform_testing'
         }
       }
       steps {
@@ -28,7 +28,7 @@ pipeline {
     stage('setupVBoxSVC') {
       agent {
         node {
-          label 'fabio_setup'
+          label 'platform_testing'
         }
       }
       steps {
@@ -44,7 +44,7 @@ pipeline {
         stage('BuildUbuntu') {
           agent {
             node {
-              label 'fabio_setup'
+              label 'platform_testing'
             }
           }
           steps {
@@ -60,7 +60,7 @@ pipeline {
         stage('BuildCentos') {
           agent {
             node {
-              label 'fabio_setup'
+              label 'platform_testing'
             }
           }
           steps {
@@ -78,7 +78,7 @@ pipeline {
     stage('cleanup') {
       agent {
         node {
-          label 'fabio_setup'
+          label 'platform_testing'
         }
       }
       steps {
