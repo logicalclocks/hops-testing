@@ -15,4 +15,5 @@ for repo in */ ; do
       git push origin :$BUILD_NUMBER
     fi
   fi
+  cd ..
 done
