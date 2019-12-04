@@ -5,17 +5,6 @@ pipeline {
     }
   }
   stages {
-    stage('cleanup') {
-      agent {
-        node {
-          label 'platform_testing'
-        }
-      }
-      steps {
-        sh '${WORKSPACE}/scripts/purge.sh'
-        sh '${WORKSPACE}/scripts/clean_branches.sh'
-      }
-    }
     stage('prepareRepos') {
       agent {
         node {
@@ -84,6 +73,16 @@ pipeline {
             }
           }
         }
+      }
+    }
+    stage('cleanup') {
+      agent {
+        node {
+          label 'platform_testing'
+        }
+      }
+      steps {
+        sh '${WORKSPACE}/scripts/clean_branches.sh'
       }
     }
   }
