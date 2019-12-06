@@ -49,12 +49,12 @@ pipeline {
           }
           steps {
             sh '${WORKSPACE}/scripts/run_test.sh ubuntu'
-            sh 'cp -r out out-${currentBuild.number}'
+            sh 'cp -r out out-$BUILD_NUMBER'
           }
           post {
             always {
               stash(name: 'ubuntu-${currentBuild.number}', includes: 'out-${currentBuild.number}/*.xml')
-              sh 'rm -r out-${currentBuild.number}'
+              sh 'rm -r out-$BUILD_NUMBER'
               sh 'rm out/*.xml'
             }
           }
@@ -67,12 +67,12 @@ pipeline {
           }
           steps {
             sh '${WORKSPACE}/scripts/run_test.sh centos'
-            sh 'cp -r out out-${currentBuild.number}'
+            sh 'cp -r out out-$BUILD_NUMBER'
           }
           post {
             always {
               stash(name: 'centos-${currentBuild.number}', includes: 'out-${currentBuild.number}/*.xml')
-              sh 'rm -r out-${currentBuild.number}'
+              sh 'rm -r out-$BUILD_NUMBER'
               sh 'rm out/centos.xml'
             }
           }
@@ -95,7 +95,7 @@ pipeline {
       unstash 'ubuntu-${currentBuild.number}'
       unstash 'centos-${currentBuild.number}'
       junit 'out-${currentBuild.number}/*.xml,out-${currentBuild.number}/centos.xml'
-      sh 'rm -r out-${currentBuild.number}'
+      sh 'rm -r out-$BUILD_NUMBER'
     }
   }
 }
