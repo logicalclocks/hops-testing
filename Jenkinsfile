@@ -56,6 +56,7 @@ pipeline {
               stash(name: 'ubuntu-${currentBuild.number}', includes: 'out-${currentBuild.number}/*.xml')
               sh 'rm -r out-$BUILD_NUMBER'
               sh 'rm out/*.xml'
+              sh '${WORKSPACE}/scripts/shutdown.sh ubuntu-$BUILD_NUMBER'
             }
           }
         }
@@ -74,6 +75,7 @@ pipeline {
               stash(name: 'centos-${currentBuild.number}', includes: 'out-${currentBuild.number}/*.xml')
               sh 'rm -r out-$BUILD_NUMBER'
               sh 'rm out/centos.xml'
+              sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER'
             }
           }
         }
