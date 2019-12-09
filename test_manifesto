@@ -1,2 +1,6 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+maismail/hopsworks/HOPSWORKS-1372
+maismail/hopsworks-chef/HOPSWORKS-1372
+maismail/kagent-chef/HOPSWORKS-1372
+maismail/elasticsearch-chef/HOPSWORKS-1372
+maismail/hopslog-chef/HOPSWORKS-1372
+maismail/epipe-chef/test_jira
