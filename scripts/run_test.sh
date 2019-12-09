@@ -14,10 +14,11 @@ else
   # Centos
   cp templates/Vagrantfile-centos karamel-chef/Vagrantfile
   cp templates/cluster-centos karamel-chef/cluster.yml
+  sed -i "s/centos-name/centos-$BUILD_NUMBER/g" karamel-chef/Vagrantfile
 fi
 
-sed -i "s/centos-name/centos-$BUILD_NUMBER/g" karamel-chef/Vagrantfile
 sed -i "s/BRANCH/$BUILD_NUMBER/g" karamel-chef/Vagrantfile
+sed -i "s/BRANCH/$BUILD_NUMBER/g" karamel-chef/cluster.yml
 
 # Execute the tests
 cd karamel-chef
