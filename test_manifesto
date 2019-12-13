@@ -1,2 +1,3 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+AlexHopsworks/hopsworks/provenance
+AlexHopsworks/hopsworks-chef/provenance
+AlexHopsworks/elasticsearch-chef/provenance
