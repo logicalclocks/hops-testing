@@ -89,6 +89,7 @@ groups:
       - hive2
       - dela
       - hops_airflow
+      - elastic
   datanode1:
     size: 1
     baremetal:
@@ -113,6 +114,7 @@ groups:
       - tensorflow
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
+      - elastic
   datanode2:
     size: 1
     baremetal:
