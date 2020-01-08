@@ -8,6 +8,8 @@ cookbooks:
     branch: "BRANCH"
 
 attrs:
+  flink:
+    url: "http://snurran.sics.se/hops/flink-1.9.1-bin-scala_2.11.tgz"
   install:
     dir: /srv/hops
   kagent:
