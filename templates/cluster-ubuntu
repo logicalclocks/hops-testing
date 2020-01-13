@@ -13,6 +13,10 @@ attrs:
   kagent:
     conda_gc_interval: "10s"
   hops:
+    yarn:
+     detect-hardware-capabilities: true
+     logical-processors-as-cores: true
+     pcores-vcores-multiplier: 0.5
     num_replicas: 2
     tls:
      enabled: true
