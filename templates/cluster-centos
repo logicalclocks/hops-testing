@@ -79,7 +79,6 @@ groups:
       - tensorflow
       - hive2
       - dela
-      - hops_airflow
       - hopsmonitor::prometheus
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
