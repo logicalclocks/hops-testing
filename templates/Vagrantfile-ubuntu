@@ -78,7 +78,7 @@ Vagrant.configure("2") do |config|
     # karamel http
     hopsworks0.vm.network(:forwarded_port, {:guest=>9090, :host=>9090})
     # Hopsworks http
-    hopsworks0.vm.network(:forwarded_port, {:guest=>8080, :host=>8080})
+    hopsworks0.vm.network(:forwarded_port, {:guest=>8181, :host=>8181})
     # Glassfish admin UI
     hopsworks0.vm.network(:forwarded_port, {:guest=>4848, :host=>4848})
 
