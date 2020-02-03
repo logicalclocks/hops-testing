@@ -51,7 +51,8 @@ attrs:
       to: sre@logicalclocks.com
       from: hopsworks@logicalclocks.com
       smtp_host: mail.hello.com
-
+  epipe:
+    url: "http://snurran.sics.se/hops/alex/provenance/ePipe/test/debian/epipe-0.11.0.tar.gz"
 
 groups:
   namenodes:
