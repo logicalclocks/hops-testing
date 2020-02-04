@@ -20,7 +20,9 @@ for repo in "${repos[@]}"
 do
   if [ -d $repo ]; then
     cd $repo
-    git checkout master
+    # Make sure there is no garbage laying around
+    git add -A
+    git reset --hard origin/master
   else
     git clone git@github.com:hopsworksjenkins/$repo.git
     cd $repo
