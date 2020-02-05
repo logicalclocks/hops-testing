@@ -10,6 +10,7 @@ cookbooks:
 attrs:
   install:
     dir: /srv/hops
+    localhost: true
   kagent:
     conda_gc_interval: "10s"
   conda:
@@ -46,7 +47,7 @@ groups:
   namenodes:
     size: 1
     baremetal:
-      ip: 10.0.2.15
+      ip: 127.0.0.1
     recipes:
       - kagent
       - conda
