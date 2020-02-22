@@ -1,24 +1,25 @@
 pipeline {
   agent {
     node {
-      label 'bbc7_testing'
+      label 'apache_builds'
     }
   }
   stages {
     stage('prepareRepos') {
       agent {
         node {
-          label 'bbc7_testing'
+          label 'apache_builds'
         }
       }
       steps {
+        sh 'printenv'
         sh '${WORKSPACE}/scripts/prepare_repos.sh'
       }
     }
     stage('checkLicenses') {
       agent {
         node {
-          label 'bbc7_testing'
+          label 'apache_builds'
         }
       }
       steps {
@@ -28,7 +29,7 @@ pipeline {
     stage('setupVBoxSVC') {
       agent {
         node {
-          label 'bbc7_testing'
+          label 'apache_builds'
         }
       }
       steps {
@@ -44,7 +45,7 @@ pipeline {
         stage('BuildUbuntu') {
           agent {
             node {
-              label 'bbc7_testing'
+              label 'apache_builds'
             }
           }
           steps {
@@ -63,7 +64,7 @@ pipeline {
         stage('BuildCentos') {
           agent {
             node {
-              label 'bbc7_testing'
+              label 'apache_builds'
             }
           }
           steps {
@@ -84,7 +85,7 @@ pipeline {
     stage('cleanup') {
       agent {
         node {
-          label 'bbc7_testing'
+          label 'apache_builds'
         }
       }
       steps {
