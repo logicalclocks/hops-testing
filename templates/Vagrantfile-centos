@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   config.disksize.size = "50GB"
 
   config.vm.define "centos-name" do |hopsworks|
-     hopsworks.vm.box = "bento/centos-7.5"
+     hopsworks.vm.box = "bento/centos-7.7"
      hopsworks.vm.hostname = 'hopsworks0.logicalclocks.com'
      hopsworks.vm.boot_timeout = 3600
      # Mount .m2 directory for maven cache
