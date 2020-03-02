@@ -1,2 +1,9 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/livy-chef/consul
+kouzant/hopsworks-chef/consul
+kouzant/hops-hadoop-chef/consul
+kouzant/hopsworks/consul
+kouzant/kzookeeper/consul
+kouzant/kagent-chef/consul
+kouzant/airflow-chef/consul
+kouzant/elasticsearch-chef/consul
+kouzant/hive-chef/consul
