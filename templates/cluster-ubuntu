@@ -90,6 +90,8 @@ groups:
       - dela
       - hops_airflow
       - elastic
+      - consul
+      - consul::master
   datanode1:
     size: 1
     baremetal:
@@ -116,6 +118,8 @@ groups:
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
       - elastic
+      - consul
+      - consul::slave
   datanode2:
     size: 1
     baremetal:
@@ -138,3 +142,5 @@ groups:
       - tensorflow
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
+      - consul
+      - consul::slave
