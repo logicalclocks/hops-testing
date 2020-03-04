@@ -10,6 +10,7 @@ cookbooks:
 attrs:
   install:
     dir: /srv/hops
+    bind_services_private_ip: true
   kagent:
     conda_gc_interval: "10s"
   conda:

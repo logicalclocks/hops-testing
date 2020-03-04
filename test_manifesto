@@ -7,3 +7,4 @@ kouzant/kagent-chef/consul
 kouzant/airflow-chef/consul
 kouzant/elasticsearch-chef/consul
 kouzant/hive-chef/consul
+kouzant/conda-chef/consul
