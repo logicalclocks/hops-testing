@@ -40,7 +40,8 @@ attrs:
       to: sre@logicalclocks.com
       from: hopsworks@logicalclocks.com
       smtp_host: mail.hello.com
-
+  epipe:
+    url: "http://snurran.sics.se/hops/epipe/test/rhel/epipe-0.12.0-pr-8.tar.gz"
 
 groups:
   namenodes:
@@ -84,4 +85,3 @@ groups:
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
-
