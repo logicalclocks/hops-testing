@@ -25,6 +25,8 @@ attrs:
        expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: true
+  hive2:
+    url: http://snurran.sics.se/hops/antonis/hive/apache-hive-3.0.0.4-bin.tar.gz    
   hopsworks:
     featurestore_online: true
     encryption_password: "verysecurepassword"
