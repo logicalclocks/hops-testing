@@ -1,2 +1,2 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+kouzant/kube-hops-chef/HOPSWORKS-1405
+kouzant/consul-chef/HOPSWORKS-1405
