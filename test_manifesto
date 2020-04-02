@@ -1,4 +1,2 @@
-logicalclocks/hopsworks-chef/mysql_bug
-logicalclocks/kagent-chef/mysql_bug
-logicalclocks/hops-hadoop-chef/mysql_bug
-logicalclocks/airflow-chef/mysql_bug
+logicalclocks/hopsworks-chef/maggy_git
+logicalclocks/tensorflow-chef/maggy_git
