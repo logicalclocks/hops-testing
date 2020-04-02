@@ -1,2 +1,4 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+logicalclocks/consul-chef/HOPSWORKS-1405_hc
+kouzant/hops-hadoop-chef/HOPSWORKS-1405_hc
+kouzant/hive-chef/HOPSWORKS-1405_hc
+kouzant/livy-chef/HOPSWORKS-1405_hc
