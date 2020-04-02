@@ -37,11 +37,6 @@ attrs:
     hive2:
       scratch_dir_delay: "30s"
       scratch_dir_cleaner_interval: "10s"
-  conda:
-    channels:
-       default_mirrors: "http://bbc2.sics.se:8000/pkgs/main/linux-64,http://bbc2.sics.se:8000/pkgs/main/noarch"
-       pytorch: "http://bbc2.sics.se:8000/pytorch"
-    use_defaults: "false"
   ndb:
     DataMemory: '256'
   jupyter:
@@ -119,7 +114,7 @@ groups:
       - hopsmonitor::purge_telegraf
       - elastic
       - consul
-      - consul::slave      
+      - consul::slave
   datanode2:
     size: 1
     baremetal:
@@ -143,4 +138,4 @@ groups:
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
       - consul
-      - consul::slave      
+      - consul::slave
