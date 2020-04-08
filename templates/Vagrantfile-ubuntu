@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
-  config.disksize.size = "50GB"
+  config.disksize.size = "100GB"
 
   config.vm.define "ubuntu-name.2" do |hopsworks2|
     hopsworks2.vm.box = "ubuntu/bionic64"

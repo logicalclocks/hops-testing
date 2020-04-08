@@ -44,6 +44,14 @@ attrs:
       to: sre@logicalclocks.com
       from: hopsworks@logicalclocks.com
       smtp_host: mail.hello.com
+  hadoop_spark:
+    url: "http://snurran.sics.se/hops/hadoop3/spark-2.4.3.2-bin-without-hadoop-with-hive-with-r.tgz"
+  flink:
+    url: "http://snurran.sics.se/hops/hadoop3/flink-1.9.2.1-bin-scala_2.11.tgz"
+  livy:
+    url: "http://snurran.sics.se/hops/hadoop3/apache-livy-0.6.1.2-bin.zip"
+  hive2:
+    url: "http://snurran.sics.se/hops/hadoop3/apache-hive-3.0.0.3-bin.tar.gz"
 
 
 groups:

@@ -1,2 +1,11 @@
-logicalclocks/hopsworks/master
-logicalclocks/hopsworks-chef/master
+berthoug/hopsworks/docker
+berthoug/hopsworks-chef/docker
+berthoug/spark-chef/docker
+berthoug/flink-chef/docker
+berthoug/livy-chef/docker
+berthoug/epipe-chef/docker
+berthoug/tensorflow-chef/docker
+berthoug/hopslog-chef/docker
+berthoug/airflow-chef/docker
+berthoug/hive-chef/docker
+berthoug/hops-hadoop-chef/docker
