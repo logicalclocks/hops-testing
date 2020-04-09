@@ -44,12 +44,18 @@ Vagrant.configure("2") do |config|
              },
              "run_timeout" => 10000,
            },
+           "build" => {
+             "test" => {
+                "community" => true
+             }
+           },
            "test" => {
              "hopsworks" => {
                "repo" => "https://github.com/hopsworksjenkins/hopsworks",
                "branch" => "BRANCH",
        	      "it" => false
-             }
+             },
+             "community" => false
            }
          }
          chef.add_recipe "karamel::install"
