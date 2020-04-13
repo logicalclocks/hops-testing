@@ -12,9 +12,9 @@ Vagrant.configure("2") do |config|
     hopsworks2.vm.boot_timeout = 3600
     hopsworks2.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      v.customize ["modifyvm", :id, "--memory", 8192]
+      v.customize ["modifyvm", :id, "--memory", 12192]
       v.customize ["modifyvm", :id, "--name", "ubuntu-name.2"]
-      v.customize ["modifyvm", :id, "--cpus", "4"]
+      v.customize ["modifyvm", :id, "--cpus", "5"]
       v.customize ["modifyvm", :id, "--vrde", "on"]
       v.customize ["modifyvm", :id, "--vrdeproperty", "TCP/Ports=5949"]
     end
@@ -43,9 +43,9 @@ Vagrant.configure("2") do |config|
     hopsworks1.vm.boot_timeout = 3600
     hopsworks1.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      v.customize ["modifyvm", :id, "--memory", 8192]
+      v.customize ["modifyvm", :id, "--memory", 12192]
       v.customize ["modifyvm", :id, "--name", "ubuntu-name.1"]
-      v.customize ["modifyvm", :id, "--cpus", "4"]
+      v.customize ["modifyvm", :id, "--cpus", "5"]
       v.customize ["modifyvm", :id, "--vrde", "on"]
       v.customize ["modifyvm", :id, "--vrdeproperty", "TCP/Ports=5948"]
     end
@@ -95,7 +95,7 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       v.customize ["modifyvm", :id, "--nictype1", "virtio"]
       v.customize ["modifyvm", :id, "--name", "ubuntu-name.0"]
-      v.customize ["modifyvm", :id, "--cpus", "8"]
+      v.customize ["modifyvm", :id, "--cpus", "6"]
       v.customize ["modifyvm", :id, "--vrde", "on"]
       v.customize ["modifyvm", :id, "--vrdeproperty", "TCP/Ports=5947"]
     end
