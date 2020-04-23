@@ -39,6 +39,8 @@ attrs:
       scratch_dir_cleaner_interval: "10s"
   jupyter:
     shutdown_timer_interval: "1m"
+  prometheus:
+    retention_time: "2h"
   alertmanager:
     email:
       to: sre@logicalclocks.com
