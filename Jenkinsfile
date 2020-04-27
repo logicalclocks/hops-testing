@@ -97,6 +97,7 @@ pipeline {
       unstash "ubuntu-${env.BUILD_NUMBER}"
       unstash "centos-${env.BUILD_NUMBER}"
       junit "out-${env.BUILD_NUMBER}/*.xml,out-${env.BUILD_NUMBER}/centos.xml"
+      junit "out-${env.BUILD_NUMBER}/ut/*.xml"
       sh 'rm -r out-$BUILD_NUMBER'
     }
   }
