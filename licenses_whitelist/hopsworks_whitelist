@@ -85,3 +85,5 @@ hopsworks-web/yo/app/templates/navbar.html
 hopsworks-web/yo/app/templates/sidebar.html
 hopsworks-web/yo/app/templates/spinner.html
 hopsworks-web/src/main/java/io/hops/hopsworks/api/airflow/AngularFileManagerServlet.java
+hopsworks-common/src/main/java/io/hops/hopsworks/common/jobs/execution/AbstractExecutionController.java
+hopsworks-common/src/main/java/io/hops/hopsworks/common/jobs/execution/YARNExecutionController.java
