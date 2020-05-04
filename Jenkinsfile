@@ -54,6 +54,7 @@ pipeline {
           post {
             always {
               stash(name: "ubuntu-${env.BUILD_NUMBER}", includes: "out-${env.BUILD_NUMBER}/*.xml")
+              junit "out-${env.BUILD_NUMBER}/ut/*.xml"
               sh 'rm -r out-$BUILD_NUMBER'
               sh 'rm out/*.xml'
               sh '${WORKSPACE}/scripts/shutdown.sh ubuntu-$BUILD_NUMBER'
@@ -97,7 +98,6 @@ pipeline {
       unstash "ubuntu-${env.BUILD_NUMBER}"
       unstash "centos-${env.BUILD_NUMBER}"
       junit "out-${env.BUILD_NUMBER}/*.xml,out-${env.BUILD_NUMBER}/centos.xml"
-      junit "out-${env.BUILD_NUMBER}/ut/*.xml"
       sh 'rm -r out-$BUILD_NUMBER'
     }
   }
