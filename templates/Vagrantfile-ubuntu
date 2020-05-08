@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
-  config.disksize.size = "50GB"
+  config.disksize.size = "100GB"
 
   config.vm.define "ubuntu-name.2" do |hopsworks2|
     hopsworks2.vm.box = "ubuntu/bionic64"
@@ -91,7 +91,7 @@ Vagrant.configure("2") do |config|
 
     hopsworks0.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      v.customize ["modifyvm", :id, "--memory", 18548]
+      v.customize ["modifyvm", :id, "--memory", 20548]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       v.customize ["modifyvm", :id, "--nictype1", "virtio"]
       v.customize ["modifyvm", :id, "--name", "ubuntu-name.0"]
