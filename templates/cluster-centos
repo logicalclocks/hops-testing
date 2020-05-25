@@ -80,4 +80,5 @@ groups:
       - hopsmonitor::node_exporter
       - hopsmonitor::purge_telegraf
       - consul::master
+      - hops::docker_registry
 
