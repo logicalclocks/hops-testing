@@ -10,8 +10,6 @@ cookbooks:
 attrs:
   install:
     dir: /srv/hops
-  kagent:
-    conda_gc_interval: "10s"
   hops:
     num_replicas: 2
     tls:
@@ -73,7 +71,6 @@ groups:
       - tensorflow
       - hopslog
       - hopslog::_filebeat-serving
-      - hopslog::_filebeat-kagent
       - hopslog::_filebeat-beam
       - hopsmonitor::prometheus
       - hopsmonitor::alertmanager
@@ -107,7 +104,6 @@ groups:
       - hadoop_spark::certs
       - flink::yarn
       - hopslog::_filebeat-spark
-      - hopslog::_filebeat-kagent
       - hopslog::_filebeat-beam
       - tensorflow
       - hopsmonitor::node_exporter
@@ -131,7 +127,6 @@ groups:
       - hadoop_spark::certs
       - flink::yarn
       - hopslog::_filebeat-spark
-      - hopslog::_filebeat-kagent
       - hopslog::_filebeat-beam
       - tensorflow
       - hopsmonitor::node_exporter
