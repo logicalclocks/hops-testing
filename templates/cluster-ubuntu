@@ -23,6 +23,9 @@ attrs:
        expiration_safety_period: "30m"
     encrypt_data_transfer:
      enabled: true
+    xattrs:
+      max-xattrs-per-inode: 127
+      max-xattr-size: 3442755
   hopsworks:
     featurestore_online: true
     encryption_password: "verysecurepassword"
