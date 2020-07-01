@@ -15,6 +15,9 @@ attrs:
   hops:
     rmappsecurity:
       actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+    xattrs:
+      max-xattrs-per-inode: 127
+      max-xattr-size: 3442755
   hopsworks:
     featurestore_online: true
     encryption_password: "verysecurepassword"
