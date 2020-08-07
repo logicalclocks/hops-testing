@@ -26,6 +26,8 @@ attrs:
     xattrs:
       max-xattrs-per-inode: 127
       max-xattr-size: 3442755
+    yarn:
+      cgroups_strict_resource_usage: "true"
   hopsworks:
     featurestore_online: true
     encryption_password: "verysecurepassword"
