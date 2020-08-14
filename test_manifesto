@@ -1,4 +1,11 @@
-logicalclocks/hopsworks-chef/mysql_bug
-logicalclocks/kagent-chef/mysql_bug
-logicalclocks/hops-hadoop-chef/mysql_bug
-logicalclocks/airflow-chef/mysql_bug
+logicalclocks/hopsworks-chef/standalone
+logicalclocks/kagent-chef/standalone
+logicalclocks/hops-hadoop-chef/standalone
+logicalclocks/ndb-chef/standalone
+logicalclocks/flink-chef/standalone
+logicalclocks/livy-chef/standalone
+logicalclocks/kafka-cookbook/standalone
+logicalclocks/elasticsearch-chef/standalone
+logicalclocks/hopslog-chef/standalone
+logicalclocks/hopsmonitor-chef/standalone
+logicalclocks/hive-chef/standalone
