@@ -81,7 +81,6 @@ groups:
       - hopsmonitor::prometheus
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
-      - hopsmonitor::purge_telegraf
       - kzookeeper
       - livy
       - hive2
@@ -113,7 +112,6 @@ groups:
       - hopslog::_filebeat-beam
       - tensorflow
       - hopsmonitor::node_exporter
-      - hopsmonitor::purge_telegraf
       - elastic
       - consul::slave
   datanode2:
@@ -136,5 +134,4 @@ groups:
       - hopslog::_filebeat-beam
       - tensorflow
       - hopsmonitor::node_exporter
-      - hopsmonitor::purge_telegraf
       - consul::slave
