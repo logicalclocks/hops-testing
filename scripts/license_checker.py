@@ -55,10 +55,9 @@ class checkerThread(threading.Thread):
             # Remove ruby headers
             return content.replace("=begin", '').replace("=end", '')
     
-    def _check_only_agpl(self, file_path, fork_commit):
+    def _check_only_lc(self, file_path, fork_commit):
         content = self._get_file_content(file_path)
     
-        matches_agpl = re.findall(agpl_regex, content)
         matches_mit = re.findall(mit_regex, content)
         matches_copyright = re.findall(copyright_lc_regex, content)
         matches_copyright_rise = re.findall(copyright_with_rise_regex, content)
@@ -66,7 +65,7 @@ class checkerThread(threading.Thread):
         commit_regex = commit_regex_placeholder.replace("commit_id", str(fork_commit))
         matches_commit = re.findall(commit_regex, content)
 
-        return len(matches_agpl) == 1 and len(matches_mit) == 0 \
+        return len(matches_mit) == 0 \
                and len(matches_copyright) == 1 and len(matches_copyright_rise) == 0 \
                and len(matches_commit) == 0
 
@@ -97,7 +96,7 @@ class checkerThread(threading.Thread):
                 first_commit_idx = self.shas.index(revisions[-1])
                 if (first_commit_idx < self.fork_commit_idx) or (file_entry.path in self.lc_files):
                     # File newer than the fork. Check only AGPL license
-                    correct = self._check_only_agpl(file_entry.abspath, self.fork_commit)
+                    correct = self._check_only_lc(file_entry.abspath, self.fork_commit)
                 else:
                     # File older than the fork. Check both header present.
                     correct = self._check_double_license(file_entry.abspath, self.fork_commit)

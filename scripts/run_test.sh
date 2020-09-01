@@ -19,7 +19,9 @@ fi
 
 sed -i "s/BRANCH/$BUILD_NUMBER/g" karamel-chef/Vagrantfile
 sed -i "s/BRANCH/$BUILD_NUMBER/g" karamel-chef/cluster.yml
+sed -i "s/NEXUS_USER/$NEXUS_USER/g" karamel-chef/cluster.yml
+sed -i "s/NEXUS_PW/$NEXUS_PW/g" karamel-chef/cluster.yml
 
 # Execute the tests
 cd karamel-chef
-sh ./test.sh
+./test.sh
