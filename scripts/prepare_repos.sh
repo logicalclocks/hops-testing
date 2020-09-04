@@ -2,12 +2,12 @@
 set -e
 
 # List of cookbooks and hopsworks repos
-repos=(hopsworks hopsworks-chef conda-chef kagent-chef hops-hadoop-chef
+repos=(hopsworks hopsworks-chef
+conda-chef kagent-chef hops-hadoop-chef
 	   spark-chef flink-chef livy-chef ndb-chef
-	   dr-elephant-chef tensorflow-chef epipe-chef dela-chef
+	   dr-elephant-chef tensorflow-chef epipe-chef dela-chef cloud-chef
 	   kzookeeper kafka-cookbook elasticsearch-chef hopslog-chef
-	   hopsmonitor-chef chef-glassfish chef-ulimit hive-chef airflow-chef
-           consul-chef)
+	   hopsmonitor-chef chef-glassfish chef-ulimit hive-chef airflow-chef kube-hops-chef consul-chef)
 
 # Create a cookbook directory - if it doesn't exists
 if [ ! -d repos ];
@@ -32,7 +32,8 @@ do
 
   # Update the repositories
   git pull upstream master
-  git checkout -b $BUILD_NUMBER 
+
+  git checkout -b $BUILD_NUMBER
   cd ..
 done
 
@@ -49,7 +50,7 @@ do
   branch=$(awk '{split($0, splits, "/"); print splits[3]}' <<< $line)
 
   cd $repo
-  git pull --no-edit git://github.com/$org/$repo.git $branch
+  git pull --no-edit git@github.com:$org/$repo.git $branch
   cd ..
 done <"../test_manifesto"
 
@@ -60,6 +61,7 @@ find . -type f -name "Berksfile" -exec  sed -i "s/master/$BUILD_NUMBER/g" {} \;
 # Push everything
 for repo in "${repos[@]}"
 do
+
   cd $repo
 
   # Check if there is anything to commit
@@ -70,7 +72,7 @@ do
   fi
 
   # Check if there are some wild dependencies.
-  if cat Berksfile | grep github: | grep -v $BUILD_NUMBER 
+  if cat Berksfile | grep github: | grep -v $BUILD_NUMBER
   then
     echo "$repo has non-master dependencies"
     exit 1
@@ -82,6 +84,6 @@ do
     exit 1
   fi
 
-  git push origin $BUILD_NUMBER 
+  git push origin $BUILD_NUMBER
   cd ..
 done

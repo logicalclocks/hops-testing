@@ -10,11 +10,19 @@ cookbooks:
 attrs:
   install:
     dir: /srv/hops
-  jupyter:
-    shutdown_timer_interval: "1m"
   hops:
+    num_replicas: 2
+    tls:
+     enabled: true
+     crl_enabled: true
+     crl_fetcher_class: "org.apache.hadoop.security.ssl.DevRemoteCRLFetcher"
+     crl_fetcher_interval: "5m"
     rmappsecurity:
-      actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+     actor_class: "org.apache.hadoop.yarn.server.resourcemanager.security.DevHopsworksRMAppSecurityActions"
+     x509:
+       expiration_safety_period: "30m"
+    encrypt_data_transfer:
+     enabled: true
     xattrs:
       max-xattrs-per-inode: 127
       max-xattr-size: 3442755
@@ -23,65 +31,114 @@ attrs:
   hopsworks:
     featurestore_online: true
     encryption_password: "verysecurepassword"
+    application_certificate_validity_period: "45m"
     kagent_liveness:
-      enabled: true
-      threshold: "10s"
+     enabled: true
+     threshold: "10s"
     jwt:
-      lifetime_ms: '43200000'
+     lifetime_ms: '43200000'
     hive2:
       scratch_dir_delay: "30s"
       scratch_dir_cleaner_interval: "10s"
-  prometheus:
-    retention_time: "2h"
+  ndb:
+    DataMemory: '1024'
+  jupyter:
+    shutdown_timer_interval: "1m"
   alertmanager:
     email:
       to: sre@logicalclocks.com
       from: hopsworks@logicalclocks.com
       smtp_host: mail.hello.com
-
+  prometheus:
+    retention_time: "2h"
+  elastic:
+    opendistro_security:
+      jwt:
+        exp_ms: "1800000"
+      audit:
+        enable_rest: "true"
+        enable_transport: "false"
 
 groups:
   namenodes:
     size: 1
     baremetal:
-      ip: 10.0.2.15
+      ip: 192.168.56.101
     recipes:
       - kagent
       - conda
       - ndb::mgmd
-      - ndb::ndbd
       - ndb::mysqld
       - hops::ndb
       - hops::rm
       - hops::nn
       - hops::jhs
+      - hops::docker_registry
       - hadoop_spark::yarn
       - hadoop_spark::historyserver
-      - hadoop_spark::certs
       - flink::yarn
       - flink::historyserver
-      - elastic
-      - livy
-      - kzookeeper
-      - kkafka
-      - epipe
       - hopsworks
       - hopsworks::migrate
       - hopsmonitor
-      - hopslog
-      - hopslog::_filebeat-spark
-      - hopslog::_filebeat-serving
-      - hopslog::_filebeat-jupyter
-      - hops::dn
-      - hops::nm
       - tensorflow
-      - hive2
-      - dela
-      - hops_airflow
+      - hopslog
+      - hopslog::_filebeat-serving
+      - hopslog::_filebeat-beam
       - hopsmonitor::prometheus
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
-      - hopsmonitor::purge_telegraf
+      - kzookeeper
+      - livy
+      - hive2
+      - dela
+      - hops_airflow
+      - elastic
       - consul::master
-      - hops::docker_registry
-
+  datanode1:
+    size: 1
+    baremetal:
+      ip: 192.168.56.102
+    recipes:
+      - kagent
+      - conda
+      - ndb::ndbd
+      - ndb::mysqld
+      - hops::ndb
+      - hops::nn
+      - hops::dn
+      - hops::nm
+      - kzookeeper
+      - kkafka
+      - livy::install
+      - epipe
+      - hadoop_spark::yarn
+      - flink::yarn
+      - hopslog::_filebeat-spark
+      - hopslog::_filebeat-beam
+      - tensorflow
+      - hopsmonitor::node_exporter
+      - elastic
+      - consul::slave
+  datanode2:
+    size: 1
+    baremetal:
+      ip: 192.168.56.103
+    recipes:
+      - kagent
+      - conda
+      - ndb::ndbd
+      - ndb::mysqld
+      - kzookeeper
+      - elastic
+      - hops::dn
+      - hops::nm
+      - kkafka
+      - livy::install
+      - hadoop_spark::yarn
+      - flink::yarn
+      - hopslog::_filebeat-spark
+      - hopslog::_filebeat-beam
+      - tensorflow
+      - hopsmonitor::node_exporter
+      - consul::slave

@@ -5,5 +5,5 @@ if [ -d karamel-chef ]; then
   git pull
   cd ..
 else
-  git clone "https://github.com/hopshadoop/karamel-chef"
+  git clone "https://github.com/logicalclocks/karamel-chef"
 fi
