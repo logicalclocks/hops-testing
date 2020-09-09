@@ -1,14 +1,14 @@
 pipeline {
   agent {
     node {
-      label 'apache_builds'
+      label 'community_tester'
     }
   }
   stages {
     stage('prepareRepos') {
       agent {
         node {
-          label 'apache_builds'
+          label 'community_tester'
         }
       }
       steps {
@@ -18,7 +18,7 @@ pipeline {
     stage('checkLicenses') {
       agent {
         node {
-          label 'apache_builds'
+          label 'community_tester'
         }
       }
       steps {
@@ -28,7 +28,7 @@ pipeline {
     stage('setupVBoxSVC') {
       agent {
         node {
-          label 'apache_builds'
+          label 'community_tester'
         }
       }
       steps {
@@ -44,7 +44,7 @@ pipeline {
         stage('BuildUbuntu') {
           agent {
             node {
-              label 'apache_builds'
+              label 'community_tester'
             }
           }
           steps {
@@ -64,7 +64,7 @@ pipeline {
         stage('BuildCentos') {
           agent {
             node {
-              label 'apache_builds'
+              label 'community_tester'
             }
           }
           steps {
@@ -85,7 +85,7 @@ pipeline {
     stage('cleanup') {
       agent {
         node {
-          label 'apache_builds'
+          label 'community_tester'
         }
       }
       steps {
