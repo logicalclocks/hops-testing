@@ -1,2 +1,3 @@
 logicalclocks/hopsworks/master
 logicalclocks/hopsworks-chef/master
+siroibaf/consul-chef/fix_generic_vm
