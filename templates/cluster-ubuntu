@@ -10,6 +10,7 @@ cookbooks:
 attrs:
   install:
     dir: /srv/hops
+    dev_ssh_keys: true
   ndb:
     DataMemory: '1024'
   jupyter:
