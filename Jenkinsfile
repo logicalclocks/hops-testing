@@ -25,20 +25,6 @@ pipeline {
         sh '${WORKSPACE}/scripts/check_licenses.sh'
       }
     }
-    stage('setupVBoxSVC') {
-      agent {
-        node {
-          label 'community_tester'
-        }
-      }
-      steps {
-        script {
-          withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
-            sh '${WORKSPACE}/scripts/setup_svc.sh'
-          }
-        }
-      }
-    }
     stage('build') {
       parallel {
         stage('BuildUbuntu') {
