@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export BERKSHELF_PATH=$PWD
+export BERKSHELF_PATH="${WORKSPACE}/karamel-chef"
 
 # Exit the scripts directory
 sh scripts/clone_karamel_chef.sh
