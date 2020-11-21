@@ -1,11 +1,7 @@
 #!/bin/bash
 
-vms=`vboxmanage list vms | grep $1 | awk -F'[{|}]' '{print $2}'`
-
-for vm in $vms
-do
-    vboxmanage controlvm $vm poweroff
-done
+virsh undefine karamel-chef_$1
+virsh destroy karamel-chef_$1
 
 # don't fail the script if the machines are already down
 exit 0

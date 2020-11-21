@@ -76,7 +76,9 @@ pipeline {
               stash(name: "centos-${env.BUILD_NUMBER}", includes: "out-${env.BUILD_NUMBER}/*.xml")
               sh 'rm -r out-$BUILD_NUMBER'
               sh 'rm out/centos.xml'
-              sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER'
+              sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER.0'
+              sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER.1'
+              sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER.2'
             }
           }
         }
