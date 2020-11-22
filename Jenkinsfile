@@ -35,6 +35,7 @@ pipeline {
           }
           steps {
             sh '${WORKSPACE}/scripts/run_test.sh ubuntu'
+            sh 'mkdir out-$BUILD_NUMBER'
             sh 'cd karamel-chef && vagrant scp ubuntu-$BUILD_NUMBER:/home/vagrant/test_report/* ../out-$BUILD_NUMBER'
           }
           post {
@@ -54,6 +55,7 @@ pipeline {
           }
           steps {
             sh '${WORKSPACE}/scripts/run_test.sh centos'
+            sh 'mkdir out-$BUILD_NUMBER'
             sh 'cd karamel-chef && vagrant scp centos-$BUILD_NUMBER.0:/home/vagrant/test_report/* ../out-$BUILD_NUMBER'
           }
           post {
