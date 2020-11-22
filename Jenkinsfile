@@ -35,14 +35,13 @@ pipeline {
           }
           steps {
             sh '${WORKSPACE}/scripts/run_test.sh ubuntu'
-            sh 'cp -r out out-$BUILD_NUMBER'
+            sh 'cd karamel-chef && vagrant scp ubuntu-$BUILD_NUMBER:/home/vagrant/test_report/* ../out-$BUILD_NUMBER'
           }
           post {
             always {
               stash(name: "ubuntu-${env.BUILD_NUMBER}", includes: "out-${env.BUILD_NUMBER}/*.xml")
               junit "out-${env.BUILD_NUMBER}/ut/*.xml"
-              sh 'rm -r out-$BUILD_NUMBER'
-              sh 'rm out/*.xml'
+              sh 'rm -rf out-$BUILD_NUMBER'
               sh '${WORKSPACE}/scripts/shutdown.sh ubuntu-$BUILD_NUMBER'
             }
           }
@@ -55,13 +54,12 @@ pipeline {
           }
           steps {
             sh '${WORKSPACE}/scripts/run_test.sh centos'
-            sh 'cp -r out out-$BUILD_NUMBER'
+            sh 'cd karamel-chef && vagrant scp centos-$BUILD_NUMBER.0:/home/vagrant/test_report/* ../out-$BUILD_NUMBER'
           }
           post {
             always {
               stash(name: "centos-${env.BUILD_NUMBER}", includes: "out-${env.BUILD_NUMBER}/*.xml")
-              sh 'rm -r out-$BUILD_NUMBER'
-              sh 'rm out/centos.xml'
+              sh 'rm -fr out-$BUILD_NUMBER'
               sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER.0'
               sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER.1'
               sh '${WORKSPACE}/scripts/shutdown.sh centos-$BUILD_NUMBER.2'
