@@ -37,6 +37,8 @@ pipeline {
             sh '${WORKSPACE}/scripts/run_test.sh ubuntu'
             sh 'mkdir out-$BUILD_NUMBER'
             sh 'cd karamel-chef && vagrant scp ubuntu-$BUILD_NUMBER:/home/vagrant/test_report/* ../out-$BUILD_NUMBER'
+            sh 'mkdir out-$BUILD_NUMBER/ut'
+            sh 'cd karamel-chef && vagrant scp ubuntu-$BUILD_NUMBER:/home/vagrant/test_report/ut/* ../out-$BUILD_NUMBER/ut'
           }
           post {
             always {
