@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
       d.graphics_type = "none"
       d.cpus = 5
       d.storage_pool_name="vdisk"
-      d.storage :file, :size => '100G', :path => 'centos-name2.img'
+      d.storage :file, :size => '100G', :path => 'centos-name.2.img'
       d.driver="kvm"
       d.uri="qemu:///system"
     end
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
       d.graphics_type = "none"
       d.cpus = 5
       d.storage_pool_name="vdisk"
-      d.storage :file, :size => '100G', :path => 'centos-name1.img'
+      d.storage :file, :size => '100G', :path => 'centos-name.1.img'
       d.driver="kvm"
       d.uri="qemu:///system"
     end
@@ -81,7 +81,7 @@ Vagrant.configure("2") do |config|
       d.graphics_type = "none"
       d.cpus = 5
       d.storage_pool_name="vdisk"
-      d.storage :file, :size => '100G', :path => 'centos-name0.img'
+      d.storage :file, :size => '100G', :path => 'centos-name.0.img'
       d.driver="kvm"
       d.uri="qemu:///system"
     end
