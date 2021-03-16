@@ -43,6 +43,8 @@ attrs:
       scratch_dir_cleaner_interval: "10s"
   ndb:
     DataMemory: '1024'
+    configuration:
+      profile: "tiny"
   jupyter:
     shutdown_timer_interval: "1m"
   alertmanager:
