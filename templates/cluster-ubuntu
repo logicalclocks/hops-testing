@@ -13,6 +13,8 @@ attrs:
     dev_ssh_keys: true
   ndb:
     DataMemory: '1024'
+    configuration:
+      profile: "tiny"
   jupyter:
     shutdown_timer_interval: "1m"
   hops:
