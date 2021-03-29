@@ -86,3 +86,4 @@ groups:
       - hopsmonitor::alertmanager
       - hopsmonitor::node_exporter
       - consul::master
+      - onlinefs
