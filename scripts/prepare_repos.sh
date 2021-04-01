@@ -7,7 +7,8 @@ conda-chef kagent-chef hops-hadoop-chef
 	   spark-chef flink-chef livy-chef ndb-chef
 	   dr-elephant-chef tensorflow-chef epipe-chef dela-chef cloud-chef
 	   kzookeeper kafka-cookbook elasticsearch-chef hopslog-chef
-	   hopsmonitor-chef chef-glassfish chef-ulimit hive-chef airflow-chef kube-hops-chef consul-chef)
+	   hopsmonitor-chef chef-glassfish chef-ulimit hive-chef airflow-chef kube-hops-chef consul-chef
+	   onlinefs-chef)
 
 # Create a cookbook directory - if it doesn't exists
 if [ ! -d repos ];
